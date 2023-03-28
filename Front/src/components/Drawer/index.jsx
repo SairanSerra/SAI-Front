@@ -1,21 +1,19 @@
-import React from 'react';
-import { Drawer } from '@mui/material';
+import React, { useState } from 'react';
 import * as Styled from './styles';
 
-const DrawerCustom = () => {
-  console.log('drawe');
-  return (
-    <Drawer
-      anchor="left"
-      open
-      onClose={() => console.log('teste')}
-    >
+const DrawerCustom = (props) => (
+  <Styled.Drawer
+    anchor="left"
+    open={props.openDrawer}
+    onClose={props.onClick}
+  >
+    <Styled.ContainerItemsDrawer>
       <Styled.Title>
-        teste
+        teste kdfjsdfbjsdfbjsdfbjs
       </Styled.Title>
-    </Drawer>
+    </Styled.ContainerItemsDrawer>
+  </Styled.Drawer>
 
-  );
-};
+);
 
 export default DrawerCustom;
