@@ -7,9 +7,8 @@ const PrincipalRoutes = () => (
 
   <BrowserRouter>
     <Routes>
-      <Route path="/" element={<Login />}>
-        <Route path="/register" element={<SignUP />} />
-      </Route>
+      <Route path="/" element={<Login />} />
+      <Route path="/register" element={<SignUP />} />
     </Routes>
   </BrowserRouter>
 
