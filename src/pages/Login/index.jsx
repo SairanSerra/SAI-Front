@@ -5,7 +5,6 @@ import Button from '../../components/Button';
 import Toast from '../../components/Toast';
 import InputCustom from '../../components/Input';
 import * as Styled from './styles';
-import DrawerCustom from '../../components/Drawer';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -13,8 +12,10 @@ const Login = () => {
   const [statusDrawer, setStatusDrawer] = useState(false);
   const navigate = useNavigate();
   const TesteToast = () => {
-    Toast('WARNING', password);
-    navigate('/register');
+    if (!email || !password) {
+      return Toast('ERROR', 'Preencha o Email/Senha Corretamente!');
+    }
+    return navigate('/register');
   };
 
   return (
@@ -65,7 +66,6 @@ const Login = () => {
         </Styled.Form>
       </Styled.ContainerForm>
 
-      <DrawerCustom onClick={() => setStatusDrawer(false)} openDrawer={statusDrawer} />
     </Styled.ContainerMaster>
   );
 };

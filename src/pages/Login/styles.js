@@ -69,6 +69,7 @@ margin-top:50px;
 cursor: pointer;
 color: #054B90;
 scale: 1.3;
+transition: 0.25s ease-out
 }
 `;
 
