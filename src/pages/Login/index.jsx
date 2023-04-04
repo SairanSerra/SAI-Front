@@ -50,16 +50,16 @@ const Login = () => {
 
           <Styled.containerLinkText>
             <Styled.ContainerTextRegiter>
-              <Styled.Text>
+              <Styled.Text onClick={() => navigate('/register')}>
                 Registre-se
               </Styled.Text>
             </Styled.ContainerTextRegiter>
 
-            <Styled.ContainerTextForgotPassword>
+            {/* <Styled.ContainerTextForgotPassword>
               <Styled.Text>
                 Esqueci a Senha
               </Styled.Text>
-            </Styled.ContainerTextForgotPassword>
+            </Styled.ContainerTextForgotPassword> */}
 
           </Styled.containerLinkText>
 

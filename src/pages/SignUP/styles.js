@@ -1,60 +1,88 @@
 import styled from 'styled-components';
-import Button from '../../components/Button';
 
 export const ContainerMaster = styled.div`
+align-items: center;
 text-align: center;
-align-items:center;
-padding: 20px;
-height: 100%;
+padding:100px;
 `;
 
-export const SubContainer = styled.div`
+export const ContainerTitle = styled.div`
+margin-bottom: 40px;
+`;
+
+export const Title = styled.span`
+font-size: 30px;
+color: #000000;
+font-weight: bold;
+`;
+
+export const ContainerInput = styled.div`
+display: block;
+width:100%;
+`;
+
+export const ContainerInputEmail = styled.div`
+margin-bottom: 20px;
+`;
+
+export const ContainerInputPassword = styled.div`
+width: 100%;
+margin-bottom: 20px;
+`;
+
+export const ContainerInputConfirmPassword = styled.div`
+width: 100%;
+margin-bottom: 20px;
+`;
+
+export const ContainerInputName = styled.div`
+width: 100%;
+margin-bottom: 20px;
+`;
+
+export const ContainerInputSector = styled.div`
+width: 100%;
+margin-bottom: 20px;
+`;
+
+export const ContainerButtom = styled.div`
+margin-top: 20px;
 `;
 
 export const ContainerForm = styled.div`
+width: 100%;
+display:flex;
+justify-content: center;
+text-align: center;
+`;
+
+export const Form = styled.div`
 border: 2px solid #000000;
 padding: 50px;
 background-color: transparent;
 border-radius: 20px;
-width: 50%;
+width: 40%;
 `;
 
-export const ContainerTitle = styled.div`
-display:block`;
-
-export const ContainerMasterInputs = styled.div`
-display: inline-block;
+export const containerLinkText = styled.div`
+display: flex;
+justify-content: center;
 `;
 
-export const ContainerEmail = styled.div`
-margin-bottom:20px;
-margin-top:20px;
+export const Text = styled.p`
+color: #1976D2;
+margin-top:50px;
+
+&:hover{
+cursor: pointer;
+color: #054B90;
+scale: 1.3;
+transition: 0.25s ease-out
+}
 `;
 
-export const ContainerPassword = styled.div`
-margin-bottom:20px;
-`;
+export const ContainerTextRegiter = styled.div``;
 
-export const ContainerConfirmPassword = styled.div`
-margin-bottom:20px;
-`;
-
-export const ContainerSection = styled.div``;
-
-export const Title = styled.p`
-font-size: 30px;
-font-weight: bold;
-`;
-
-export const ContainerButton = styled.div`
-margin-top: 40px;
-width: 100%;
-`;
-
-export const ButtonBack = styled(Button)`
-margin-right: 30px;
-`;
-
-export const ButtonRegister = styled(Button)`
-margin-left: 20px;
+export const ContainerTextForgotPassword = styled.div`
+margin-left: 50px;
 `;

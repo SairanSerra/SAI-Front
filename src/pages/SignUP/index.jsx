@@ -1,73 +1,57 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import {
-  FormControl, InputLabel, MenuItem, Select,
-} from '@mui/material';
-import Button from '../../components/Button';
 import * as Styled from './styles';
 import Struct from '../../components/Layout';
 import InputCustom from '../../components/Input';
 import DropdownCustom from '../../components/Dropdown';
+import useSignUP from './hooks/useSignUp';
+import { ItemsDropdownSignUP } from './utils/itemsDropdown';
+import Button from '../../components/Button';
 
 const SignUP = () => {
-  const ItensDropdown = [
-    {
-      label: 'Ferramentaria',
-      value: 'FERRAMENTARIA',
-    },
-    {
-      label: 'Compras',
-      value: 'COMPRAS',
-    },
-    {
-      label: 'Projeto',
-      value: 'PROJETO',
-    },
-  ];
-  const navigate = useNavigate();
+  const { navigate } = useSignUP();
   return (
-    <Struct>
+    <Struct styles={{ display: 'flex', justifyContent: 'center' }}>
       <Styled.ContainerMaster>
-        <Styled.SubContainer>
-          <Styled.ContainerTitle>
-            <Styled.Title>Cadastre-se</Styled.Title>
-          </Styled.ContainerTitle>
 
-          <Styled.ContainerForm>
+        <Styled.ContainerTitle>
+          <Styled.Title>Cadastre - se</Styled.Title>
+        </Styled.ContainerTitle>
 
-            <Styled.ContainerMasterInputs>
+        <Styled.ContainerForm>
 
-              <Styled.ContainerEmail>
-                <InputCustom label="Email" styles={{ width: 100 }} />
-              </Styled.ContainerEmail>
+          <Styled.Form>
+            <Styled.ContainerInput>
 
-              <Styled.ContainerPassword>
+              <Styled.ContainerInputName>
+                <InputCustom label="Name" styles={{ width: '100%' }} />
+              </Styled.ContainerInputName>
+
+              <Styled.ContainerInputEmail>
+                <InputCustom label="Email" />
+              </Styled.ContainerInputEmail>
+
+              <Styled.ContainerInputPassword>
                 <InputCustom label="Senha" />
-              </Styled.ContainerPassword>
+              </Styled.ContainerInputPassword>
 
-              <Styled.ContainerConfirmPassword>
-                <InputCustom label="Confirme a Senha" />
-              </Styled.ContainerConfirmPassword>
+              <Styled.ContainerInputConfirmPassword>
+                <InputCustom label="Confirme a senha" />
+              </Styled.ContainerInputConfirmPassword>
 
-              <Styled.ContainerSection>
-                <DropdownCustom label="Setor" itens={ItensDropdown} />
-              </Styled.ContainerSection>
+              <Styled.ContainerInputSector>
+                <DropdownCustom label="Setor" itens={ItemsDropdownSignUP()} />
+              </Styled.ContainerInputSector>
 
-            </Styled.ContainerMasterInputs>
+              <Styled.ContainerButtom>
+                <Button color="primary" variant="outlined" title="Voltar" />
+                <Button color="primary" title="Registrar" />
+              </Styled.ContainerButtom>
 
-            <Styled.ContainerButton>
-              {/* <Styled.ContainerButtonBack> */}
-              <Styled.ButtonBack title="Voltar" typeButton="outlined" onClick={() => navigate('/')} />
-              {/* </Styled.ContainerButtonBack> */}
+            </Styled.ContainerInput>
 
-              {/* <Styled.ContainerButtonRegister> */}
-              <Styled.ButtonRegister title="Cadastrar" onClick={() => navigate('/')} />
-              {/* </Styled.ContainerButtonRegister> */}
+          </Styled.Form>
+        </Styled.ContainerForm>
 
-            </Styled.ContainerButton>
-
-          </Styled.ContainerForm>
-        </Styled.SubContainer>
       </Styled.ContainerMaster>
     </Struct>
   );
