@@ -92,16 +92,16 @@ const SignUP = () => {
 
             <Styled.ContainerInputSector>
               <Controller
-                name="sector"
+                name="group"
                 control={control}
                 rules={{ required: true }}
                 render={({ field: { onChange, value } }) => (
                   <DropdownCustom
-                    label="Setor"
+                    label="Grupo"
                     onChange={onChange}
                     value={value}
                     itens={ItemsDropdownSignUP()}
-                    error={errors.sector !== undefined}
+                    error={errors.group !== undefined}
                   />
                 )}
               />
