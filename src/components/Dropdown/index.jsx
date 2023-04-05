@@ -8,6 +8,9 @@ const DropdownCustom = (props) => (
     <InputLabel>{props.label}</InputLabel>
     <Select
       label={props.label}
+      error={props.error}
+      onChange={props.onChange}
+      value={props.value}
     >
       {props.itens.map((element) => (
         <MenuItem value={element.value}>{element.label}</MenuItem>

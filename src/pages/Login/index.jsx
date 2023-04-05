@@ -39,7 +39,7 @@ const Login = () => {
             </Styled.ContainerInputEmail>
 
             <Styled.ConatinerInputPassword>
-              <InputCustom label="Senha" value={password} onChange={(v) => setPassword(v.target.value)} />
+              <InputCustom label="Senha" value={password} typeInput="password" onChange={(v) => setPassword(v.target.value)} />
             </Styled.ConatinerInputPassword>
 
           </Styled.ContainerInput>

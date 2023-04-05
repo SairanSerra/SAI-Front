@@ -46,7 +46,8 @@ margin-bottom: 20px;
 `;
 
 export const ContainerButtom = styled.div`
-margin-top: 20px;
+margin-top: 70px;
+display: flex;
 `;
 
 export const ContainerForm = styled.div`
