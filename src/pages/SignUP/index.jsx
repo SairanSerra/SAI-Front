@@ -30,7 +30,7 @@ const SignUP = () => {
                 rules={{ required: true }}
                 render={({ field: { onChange, value } }) => (
                   <InputCustom
-                    label="Name"
+                    label="Nome"
                     onChange={onChange}
                     value={value}
                     error={errors.name !== undefined}

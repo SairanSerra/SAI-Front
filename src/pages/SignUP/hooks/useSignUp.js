@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form';
 
 const useSignUP = () => {
   const navigate = useNavigate();
+
   const {
     handleSubmit, formState: { errors }, control,
   } = useForm({
@@ -11,7 +12,7 @@ const useSignUP = () => {
       email: '',
       password: '',
       confirmPassword: '',
-      sector: '',
+      group: '',
     },
     mode: 'onChange',
   });

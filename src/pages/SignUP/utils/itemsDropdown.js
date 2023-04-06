@@ -11,4 +11,8 @@ export const ItemsDropdownSignUP = () => [
     label: 'Projeto',
     value: 'PROJETO',
   },
+  {
+    label: 'Admin',
+    value: 'ADMIN',
+  },
 ];
