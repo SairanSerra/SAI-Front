@@ -3,13 +3,11 @@ import * as Styled from './styles';
 import InputCustom from '../../components/Input';
 import DropdownCustom from '../../components/Dropdown';
 import Button from '../../components/Button';
-import Struct from '../../components/Layout';
 
 const CreateProject = () => {
   console.log('de');
 
   return (
-    <Struct>
       <Styled.ContainerMaster>
 
         <Styled.ContainerTitle>
@@ -59,7 +57,7 @@ const CreateProject = () => {
         </Styled.ContainerForm>
 
       </Styled.ContainerMaster>
-    </Struct>
+
   );
 };
 
