@@ -5,6 +5,7 @@ import SignUP from '../pages/SignUP';
 import RouteProject from './project';
 import RouteComponents from './components';
 import RouteSteps from './steps';
+import RouteClients from './client';
 
 const PrincipalRoutes = () => (
 
@@ -15,6 +16,7 @@ const PrincipalRoutes = () => (
       <Route path="/project/*" element={<RouteProject />} />
       <Route path="/components/*" element={<RouteComponents />} />
       <Route path="/steps/*" element={<RouteSteps />} />
+      <Route path="/clients/*" element={<RouteClients />} />
     </Routes>
   </BrowserRouter>
 
