@@ -1,24 +1,20 @@
 /* eslint-disable react/jsx-pascal-case */
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { Controller } from 'react-hook-form';
 import Button from '../../components/Button';
 import Toast from '../../components/Toast';
 import InputCustom from '../../components/Input';
+import useLogin from './hooks/useLogin';
 import * as Styled from './styles';
 
 const Login = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [statusDrawer, setStatusDrawer] = useState(false);
-  const navigate = useNavigate();
-  const TesteToast = () => {
-    if (!email || !password) {
-      return Toast('ERROR', 'Preencha o Email/Senha Corretamente!');
-    }
-    return navigate('/register');
-  };
+  const {
+    navigate, errors, handleSubmit, control, HandleLogin,
+  } = useLogin();
 
   return (
+
     <Styled.ContainerMaster>
 
       <Styled.ContainerLogo>
@@ -35,17 +31,42 @@ const Login = () => {
           <Styled.ContainerInput>
 
             <Styled.ContainerInputEmail>
-              <InputCustom label="Email" value={email} onChange={(v) => setEmail(v.target.value)} />
+              <Controller
+                name="email"
+                control={control}
+                rules={{ required: true }}
+                render={({ field: { onChange, value } }) => (
+                  <InputCustom
+                    label="Email"
+                    onChange={onChange}
+                    value={value}
+                    error={errors.email !== undefined}
+                  />
+                )}
+              />
             </Styled.ContainerInputEmail>
 
             <Styled.ConatinerInputPassword>
-              <InputCustom label="Senha" value={password} typeInput="password" onChange={(v) => setPassword(v.target.value)} />
+              <Controller
+                name="password"
+                control={control}
+                rules={{ required: true }}
+                render={({ field: { onChange, value } }) => (
+                  <InputCustom
+                    label="password"
+                    onChange={onChange}
+                    value={value}
+                    error={errors.password !== undefined}
+                  />
+                )}
+              />
+
             </Styled.ConatinerInputPassword>
 
           </Styled.ContainerInput>
 
           <Styled.ContainerButtom>
-            <Button color="primary" title="Login" onClick={() => TesteToast()} />
+            <Button color="primary" title="Login" onClick={handleSubmit(HandleLogin)} />
           </Styled.ContainerButtom>
 
           <Styled.containerLinkText>

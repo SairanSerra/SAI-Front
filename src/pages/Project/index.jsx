@@ -8,55 +8,43 @@ const CreateProject = () => {
   console.log('de');
 
   return (
-      <Styled.ContainerMaster>
+    <Styled.ContainerMaster>
 
-        <Styled.ContainerTitle>
-          <Styled.Title>Criação de Projeto</Styled.Title>
-        </Styled.ContainerTitle>
+      <Styled.ContainerTitle>
+        <Styled.Title>Criação de Projeto</Styled.Title>
+      </Styled.ContainerTitle>
 
-        <Styled.ContainerForm>
-          <Styled.Form>
-            <Styled.ContainerInput>
+      <Styled.ContainerForm>
+        <Styled.Form>
+          <Styled.ContainerInput>
 
-              <Styled.ContainerInputCodigo>
-                <InputCustom label="Código" />
-              </Styled.ContainerInputCodigo>
+            <Styled.ContainerInputCodigo>
+              <InputCustom label="Código" />
+            </Styled.ContainerInputCodigo>
 
-              <Styled.ContainerInputStatus>
-                <InputCustom label="Status" />
-              </Styled.ContainerInputStatus>
+            <Styled.ContainerInputStatus>
+              <InputCustom label="Nome do Projeto" />
+            </Styled.ContainerInputStatus>
 
-              <Styled.ContainerInputDateRequest>
-                <InputCustom label="Data da Requisição" />
-              </Styled.ContainerInputDateRequest>
+            <Styled.ContainerInputNameCliente>
+              <InputCustom label="Cliente" />
+            </Styled.ContainerInputNameCliente>
 
-              <Styled.ContainerInputClassificationClient>
-                <InputCustom label="Classificação do Cliente" />
-              </Styled.ContainerInputClassificationClient>
+            <Styled.ContainerInputDateRequest>
+              <InputCustom label="Data da Requisição" type="date" mask="99/99/9999" />
+            </Styled.ContainerInputDateRequest>
 
-              <Styled.ContainerInputNameCliente>
-                <InputCustom label="Nome do Cliente" />
-              </Styled.ContainerInputNameCliente>
+            <Styled.ContainerButtom>
+              <Button color="primary" typeButton="outlined" title="Cancelar" style={{ marginRight: '50px' }} />
+              <Button color="primary" title="Salvar" />
+            </Styled.ContainerButtom>
 
-              <Styled.ContainerInputContactCliente>
-                <InputCustom label="Contato do Cliente" />
-              </Styled.ContainerInputContactCliente>
+          </Styled.ContainerInput>
 
-              <Styled.ContainerInputSteps>
-                <InputCustom label="Etapas" />
-              </Styled.ContainerInputSteps>
+        </Styled.Form>
+      </Styled.ContainerForm>
 
-              <Styled.ContainerButtom>
-                <Button color="primary" typeButton="outlined" title="Cancelar" style={{ marginRight: '50px' }} />
-                <Button color="primary" title="Salvar" />
-              </Styled.ContainerButtom>
-
-            </Styled.ContainerInput>
-
-          </Styled.Form>
-        </Styled.ContainerForm>
-
-      </Styled.ContainerMaster>
+    </Styled.ContainerMaster>
 
   );
 };

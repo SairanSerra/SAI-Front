@@ -21,23 +21,9 @@ display: block;
 width:100%;
 `;
 
-export const ContainerInputStatus = styled.div`
+export const ContainerInputSpecific = styled.div`
 margin-bottom: 20px;
-`;
-
-export const ContainerInputDateRequest = styled.div`
-width: 100%;
-margin-bottom: 20px;
-`;
-
-export const ContainerInputCodigo = styled.div`
-width: 100%;
-margin-bottom: 20px;
-`;
-
-export const ContainerInputNameCliente = styled.div`
-width: 100%;
-margin-bottom: 20px;
+display:flex;
 `;
 
 export const ContainerButtom = styled.div`

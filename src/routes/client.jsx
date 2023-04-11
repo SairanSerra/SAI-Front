@@ -1,15 +1,15 @@
 /* eslint-disable react/react-in-jsx-scope */
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import CreateComponents from '../pages/Component';
+import CreateClients from '../pages/Client';
 
-const RouteComponents = () => {
+const RouteClients = () => {
   console.log('aqui');
   return (
     <Routes>
-      <Route path="/" element={<CreateComponents />} />
+      <Route path="/" element={<CreateClients />} />
     </Routes>
   );
 };
 
-export default RouteComponents;
+export default RouteClients;
