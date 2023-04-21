@@ -12,18 +12,16 @@ const Login:React.FC = () => {
                         <div className="flex flex-wrap items-center -mx-4">
                             <div className="w-full lg:w-1/2 px-4 mb-16 lg:mb-0">
                                 <div className="max-w-md">
-                                    <span className="text-lg text-blue-400 font-bold">Register Account</span>
-                                    <h2 className="mt-8 mb-12 text-5xl font-bold font-heading text-white">Start creating a new template by selecting UI components</h2>
+                                    <span className="text-lg text-blue-400 font-bold">SAI Tecnologia</span>
+                                    <h2 className="mt-8 mb-12 text-5xl font-bold font-heading text-white">Gerencie suas ferramentas em um só lugar.</h2>
                                     <p className="text-lg text-gray-200">
-                                        <span>The brown fox jumps over</span>
-                                        <span className="text-white">the lazy dog.</span>
+                                        <span>Faça o login para acessar o sistema de gerenciamento de ferramentaria.</span>
                                     </p>
                                 </div>
                             </div>
                             <div className="w-full lg:w-1/2 px-4">
                                 <div className="px-6 lg:px-20 py-12 lg:py-24 bg-gray-600 rounded-lg">
                                     <form action="#">
-                                        <h3 className="mb-10 text-2xl text-white font-bold font-heading">Register Account</h3>
                                         <div className="flex items-center pl-6 mb-3 bg-white rounded-full">
                                             <span className="inline-block pr-3 py-2 border-r border-gray-50">
                                                 <svg className="w-5 h-5" width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -32,7 +30,7 @@ const Login:React.FC = () => {
                                                     <rect x="15" y="15" width="5" height="1" rx="0.5" fill="black"></rect><rect x="17" y="18" width="5" height="1" rx="0.5" transform="rotate(-90 17 18)" fill="black"></rect>
                                                 </svg>
                                             </span>
-                                            <input className="w-full pl-4 pr-6 py-4 font-bold placeholder-gray-900 rounded-r-full focus:outline-none" type="email" placeholder="example@shuffle.dev" />
+                                            <input className="w-full pl-4 pr-6 py-4 font-bold placeholder-gray-900 rounded-r-full focus:outline-none" type="email" placeholder="exemplo@exemplo.com" />
                                         </div>
                                         <div className="flex items-center pl-6 mb-3 bg-white rounded-full">
                                             <span className="inline-block pr-3 py-2 border-r border-gray-50">
@@ -41,22 +39,12 @@ const Login:React.FC = () => {
                                                     <path d="M8.49957 8.93567C7.26775 8.93567 6.26562 9.93779 6.26562 11.1696C6.26562 11.8679 6.60247 12.5283 7.1592 12.9474V14.7439C7.1592 15.4829 7.76062 16.0843 8.49957 16.0843C9.2381 16.0843 9.83994 15.4829 9.83994 14.7439V12.9474C10.3966 12.5278 10.7335 11.8679 10.7335 11.1696C10.7335 9.93779 9.7309 8.93567 8.49957 8.93567ZM9.16793 12.3228C9.03032 12.4023 8.94636 12.5502 8.94636 12.7088V14.7439C8.94636 14.9906 8.74572 15.1907 8.49957 15.1907C8.25342 15.1907 8.05278 14.9906 8.05278 14.7439V12.7088C8.05278 12.5502 7.96833 12.4032 7.83072 12.3228C7.41026 12.078 7.1592 11.6468 7.1592 11.1696C7.1592 10.4307 7.76062 9.82925 8.49957 9.82925C9.2381 9.82925 9.83994 10.4307 9.83994 11.1696C9.83994 11.6468 9.58881 12.078 9.16793 12.3228Z" fill="black"></path>
                                                 </svg>
                                             </span>
-                                            <input className="w-full pl-4 pr-6 py-4 font-bold placeholder-gray-900 rounded-r-full focus:outline-none" type="password" placeholder="Password" />
+                                            <input className="w-full pl-4 pr-6 py-4 font-bold placeholder-gray-900 rounded-r-full focus:outline-none" type="password" placeholder="Senha" />
                                         </div>
-                                        <div className="flex items-center pl-6 mb-6 bg-white rounded-full">
-                                            <span className="inline-block pr-3 py-2 border-r border-gray-50">
-                                                <svg className="w-5 h-5" width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M15.6243 13.5625C15.3939 13.5625 15.2077 13.7581 15.2077 14V16.4517C15.2077 18.2573 14.0443 20.125 12.0973 20.125H5.42975C3.56848 20.125 1.87435 18.3741 1.87435 16.4517V10.5H15.6243C15.8547 10.5 16.041 10.3044 16.041 10.0625C16.041 9.82058 15.8547 9.625 15.6243 9.625H15.2077V5.95175C15.2077 2.39183 12.8635 0 9.37435 0H7.70768C4.21855 0 1.87435 2.39183 1.87435 5.95175V9.625H1.45768C1.22728 9.625 1.04102 9.82058 1.04102 10.0625V16.4517C1.04102 18.8322 3.13268 21 5.42975 21H12.0972C14.3089 21 16.0409 19.0023 16.0409 16.4517V14C16.041 13.7581 15.8547 13.5625 15.6243 13.5625ZM2.70768 5.95175C2.70768 2.86783 4.67022 0.875 7.70768 0.875H9.37435C12.4119 0.875 14.3743 2.86783 14.3743 5.95175V9.625H2.70768V5.95175Z" fill="black"></path>
-                                                    <path d="M18.8815 9.3711C18.7482 9.17377 18.4878 9.12827 18.3003 9.26701L8.58655 16.4919L6.75235 14.5655C6.58942 14.3944 6.32608 14.3944 6.16322 14.5655C6.00028 14.7366 6.00028 15.0131 6.16322 15.1842L8.24655 17.3717C8.32695 17.4561 8.43362 17.4999 8.54115 17.4999C8.62488 17.4999 8.70868 17.4732 8.78282 17.4194L18.7828 9.98185C18.9703 9.84143 19.0141 9.56843 18.8815 9.3711Z" fill="black"></path>
-                                                </svg>
-                                            </span>
-                                            <input className="w-full pl-4 pr-6 py-4 font-bold placeholder-gray-900 rounded-r-full focus:outline-none" type="password" placeholder="Repeat password" />
+                                        <div className="flex items-center pl-6 mb-6 bg-white rounded-full">                
                                         </div>
-                                        <div className="inline-flex mb-10">
-                                            <input className="mr-4" type="checkbox" />
-                                            <p className="-mt-2 text-sm text-gray-200">By singning up, you agree to our <a className="text-white" href="#">Terms, Data Policy</a>and <a className="text-white" href="#">Cookies.</a></p>
-                                        </div>
-                                        <button className="py-4 w-full bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-full transition duration-200">Get started</button>
+                                        <button className="py-4 w-full bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-full transition duration-200">Entrar</button>
+                                        <a className="block mb-4 py-4 px-12 my-5 text-white text-center font-bold border border-gray-50 hover:border-gray-300 rounded-full cursor-pointer">Cadastre-se</a>
                                     </form>
                                 </div>
                             </div>

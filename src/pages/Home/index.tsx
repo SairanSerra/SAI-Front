@@ -28,14 +28,15 @@ const Home:React.FC = () => {
                                 <span>
                                     <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle></svg>
                                 </span>
-                                <li><a className="text-white font-bold text-lg hover:cursor-pointer hover:text-blue-500">Lançamentos</a></li>
+                                <li><a className="text-white font-bold text-lg hover:cursor-pointer hover:text-blue-500" onClick={() => navigate('/feature')}>Lançamentos</a></li>
                                 <span>
                                     <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle></svg>
                                 </span>
                                 <li><a className="text-white font-bold text-lg hover:cursor-pointer hover:text-blue-500" onClick={() => navigate('/contact')}>Contato</a></li>
                             </ul>
                         </div>
-                        <div className="hidden lg:block"><a className="inline-block px-12 py-4 text-white font-bold border border-gray-200 hover:border-blue-500 hover:text-blue-500 rounded-full" href="#">Entrar</a></div>
+                        <div className="hidden lg:block"><a className="block mb-4 py-4 px-12 my-5 text-white text-center font-bold border border-gray-50 hover:border-gray-300 rounded-full cursor-pointer"
+                            onClick={() => navigate('/login')}>Entrar</a></div>
                     </div>
                 </nav>
                 <div className="relative container px-4 pt-12 md:pt-20 mx-auto">
@@ -59,13 +60,14 @@ const Home:React.FC = () => {
                         <ul>
                             <li className="mb-1 px-10"><a className="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Produtos</a></li>
                             <li className="mb-1 px-10"><a className="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">História</a></li>
-                            <li className="mb-1 px-10"><a className="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Lançamentos</a></li>
+                            <li className="mb-1 px-10"><a className="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" onClick={() => navigate('/feature')}>Lançamentos</a></li>
                             <li className="mb-1 px-10"><a className="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl"onClick={() => navigate('/contact')}>Contato</a></li>
                         </ul>
                     </div>
                     <div className="mt-auto px-10">
                         <div className="pt-6">
-                            <a className="block mb-4 py-4 px-12 text-gray-800 text-center font-bold border border-gray-50 hover:border-gray-100 rounded-full" href="#">Entrar</a>
+                            <a className="block mb-4 py-4 px-12 my-5 text-white text-center font-bold border border-gray-50 hover:border-gray-300 rounded-full cursor-pointer" 
+                                onClick={() => navigate('/login')}>Entrar</a>
                             <a className="block py-4 px-12 text-white text-center font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200" href="#">Cadastre-se</a></div>
                         <p className="mt-6 mb-4 text-lg text-center">
                             <span>2023 © SAI. Todos direitos reservados.</span>
