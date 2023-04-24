@@ -1,7 +1,9 @@
 import React from 'react';
 import Footer from '../../components/Layout/Footer';
+import { useNavigate } from 'react-router-dom';
 
 const Login:React.FC = () => {
+    const navigate = useNavigate();
     return(
         <div>
             <section className="relative py-20 2xl:py-40 bg-gray-800 overflow-hidden">
@@ -22,7 +24,7 @@ const Login:React.FC = () => {
                             <div className="w-full lg:w-1/2 px-4">
                                 <div className="px-6 lg:px-20 py-12 lg:py-24 bg-gray-600 rounded-lg">
                                     <form action="#">
-                                        <div className="flex items-center pl-6 mb-3 bg-white rounded-full">
+                                        <div className="flex items-center pl-6 mb-5 bg-white rounded-full">
                                             <span className="inline-block pr-3 py-2 border-r border-gray-50">
                                                 <svg className="w-5 h-5" width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M7.29593 0.492188C4.81333 0.492188 2.80078 2.50474 2.80078 4.98734C2.80078 7.46993 4.81333 9.48248 7.29593 9.48248C9.77851 9.48248 11.7911 7.46993 11.7911 4.98734C11.7911 2.50474 9.77851 0.492188 7.29593 0.492188ZM3.69981 4.98734C3.69981 3.00125 5.30985 1.39122 7.29593 1.39122C9.28198 1.39122 10.892 3.00125 10.892 4.98734C10.892 6.97342 9.28198 8.58346 7.29593 8.58346C5.30985 8.58346 3.69981 6.97342 3.69981 4.98734Z" fill="black"></path>
@@ -44,7 +46,8 @@ const Login:React.FC = () => {
                                         <div className="flex items-center pl-6 mb-6 bg-white rounded-full">                
                                         </div>
                                         <button className="py-4 w-full bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-full transition duration-200">Entrar</button>
-                                        <a className="block mb-4 py-4 px-12 my-5 text-white text-center font-bold border border-gray-50 hover:border-gray-300 rounded-full cursor-pointer">Cadastre-se</a>
+                                        <a className="block mb-4 py-4 px-12 my-5 text-white text-center font-bold border border-gray-50 hover:border-gray-300 rounded-full cursor-pointer" 
+                                            onClick={() => navigate('/signup')}>Cadastre-se</a>
                                     </form>
                                 </div>
                             </div>
