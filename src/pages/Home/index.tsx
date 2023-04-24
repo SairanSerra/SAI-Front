@@ -10,9 +10,8 @@ const Home:React.FC = () => {
             <section className="pb-20 bg-gray-800">
                 <nav className="relative">
                     <div className="flex py-8 px-4 lg:px-8 justify-between items-center">
-                        <a className="text-2xl text-white font-bold" href="#">
-                            <img className="h-7" src="zospace-assets/logos/zospace-logo.svg" alt="" width="auto" />
-                        </a>
+                        <div className="text-2xl" />
+                           
                         <div className="lg:hidden">
                             <button className="p-2 navbar-burger">
                                 <svg className="w-10 h-3" width="39" height="13" viewBox="0 0 39 13" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="39" height="2" rx="1" fill="#C4C4C4"></rect><rect x="19" y="11" width="20" height="2" rx="1" fill="#C4C4C4"></rect></svg>
@@ -20,15 +19,11 @@ const Home:React.FC = () => {
                         </div>
                         <div className="hidden lg:block absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2">
                             <ul className="flex items-center text-white space-x-10">
-                                <li><a className="text-white font-bold text-lg hover:cursor-pointer hover:text-blue-500">Produtos</a></li>
+                                <li><a className="text-white font-bold text-lg hover:cursor-pointer hover:text-blue-500" onClick={() => navigate('/home/product')}>Produtos</a></li>
                                 <span>
                                     <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle></svg>
                                 </span>
-                                <li><a className="text-white font-bold text-lg hover:cursor-pointer hover:text-blue-500">História</a></li>
-                                <span>
-                                    <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle></svg>
-                                </span>
-                                <li><a className="text-white font-bold text-lg hover:cursor-pointer hover:text-blue-500" onClick={() => navigate('/feature')}>Lançamentos</a></li>
+                                <li><a className="text-white font-bold text-lg hover:cursor-pointer hover:text-blue-500" onClick={() => navigate('/home/feature')}>Lançamentos</a></li>
                                 <span>
                                     <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.5" cy="2.5" r="2.5" fill="#726B6B"></circle></svg>
                                 </span>
@@ -59,9 +54,8 @@ const Home:React.FC = () => {
                 <div className="relative flex flex-col py-8 h-full w-full bg-white overflow-y-auto">
                     <div>
                         <ul>
-                            <li className="mb-1 px-10"><a className="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">Produtos</a></li>
-                            <li className="mb-1 px-10"><a className="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" href="#">História</a></li>
-                            <li className="mb-1 px-10"><a className="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" onClick={() => navigate('/feature')}>Lançamentos</a></li>
+                            <li className="mb-1 px-10"><a className="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" onClick={() => navigate('/home/product')}>Produtos</a></li>
+                            <li className="mb-1 px-10"><a className="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl" onClick={() => navigate('/home/feature')}>Lançamentos</a></li>
                             <li className="mb-1 px-10"><a className="block pl-8 py-4 text-xl text-gray-800 hover:bg-blueGray-50 rounded-xl"onClick={() => navigate('/contact')}>Contato</a></li>
                         </ul>
                     </div>
