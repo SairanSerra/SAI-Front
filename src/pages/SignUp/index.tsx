@@ -5,6 +5,7 @@ import ImageCircle from '../../assets/circle.svg';
 import ImagePurpleLine from '../../assets/purple-line.svg';
 import DropdownCustom from '../../components/Dropdown';
 import { ItemsDropdownSignUP } from './utils/itemsDropdown';
+import InputCustom from '../../components/InputCustom';
 
 const SignUP:React.FC = () => {
     return(
@@ -31,7 +32,7 @@ const SignUP:React.FC = () => {
                                             <path d="M10.4997 17.4966C8.70684 17.4966 6.91397 16.8141 5.54984 15.45C5.37922 15.2793 5.37922 15.002 5.54984 14.8313C5.72047 14.6607 5.99784 14.6607 6.16847 14.8313C8.55722 17.2192 12.4422 17.2192 14.831 14.8313C15.0016 14.6607 15.279 14.6607 15.4496 14.8313C15.6202 15.002 15.6202 15.2793 15.4496 15.45C14.0855 16.8141 12.2926 17.4966 10.4997 17.4966Z" fill="black"></path>
                                         </svg>
                                     </span>
-                                    <input className="w-full pr-6 pl-4 py-4 font-bold bg-transparent placeholder-gray-900 rounded-r-full" type="text" placeholder="Nome" />
+                                    <InputCustom type="text" placeholder="Nome" />
                                 </div>
                             </div>
                             <div className="w-full md:w-1/2 px-4">
@@ -43,7 +44,7 @@ const SignUP:React.FC = () => {
                                             <rect x="15" y="15" width="5" height="1" rx="0.5" fill="black"></rect><rect x="17" y="18" width="5" height="1" rx="0.5" transform="rotate(-90 17 18)" fill="black"></rect>
                                         </svg>
                                     </span>
-                                    <input className="w-full pr-6 pl-4 py-4 bg-transparent font-bold placeholder-gray-900 rounded-r-full focus:outline-none" type="email" placeholder="exemplo@exemplo.com" />
+                                    <InputCustom type="email" placeholder="exemplo@exemplo.com" />
                                 </div>
                             </div>
                         </div>
@@ -56,7 +57,7 @@ const SignUP:React.FC = () => {
                                             <path d="M8.49957 8.93555C7.26775 8.93555 6.26562 9.93767 6.26562 11.1695C6.26562 11.8678 6.60247 12.5282 7.1592 12.9473V14.7438C7.1592 15.4828 7.76062 16.0842 8.49957 16.0842C9.2381 16.0842 9.83994 15.4828 9.83994 14.7438V12.9473C10.3966 12.5277 10.7335 11.8678 10.7335 11.1695C10.7335 9.93767 9.7309 8.93555 8.49957 8.93555ZM9.16793 12.3227C9.03032 12.4022 8.94636 12.5501 8.94636 12.7087V14.7438C8.94636 14.9904 8.74572 15.1906 8.49957 15.1906C8.25342 15.1906 8.05278 14.9904 8.05278 14.7438V12.7087C8.05278 12.5501 7.96833 12.4031 7.83072 12.3227C7.41026 12.0778 7.1592 11.6467 7.1592 11.1695C7.1592 10.4305 7.76062 9.82913 8.49957 9.82913C9.2381 9.82913 9.83994 10.4305 9.83994 11.1695C9.83994 11.6467 9.58881 12.0778 9.16793 12.3227Z" fill="black"></path>
                                         </svg>
                                     </span>
-                                    <input className="w-full pr-6 pl-4 py-4 font-bold bg-transparent placeholder-gray-900 rounded-r-full focus:outline-none" type="password" placeholder="Senha" />
+                                    <InputCustom type="password" placeholder="Senha" />
                                 </div>
                             </div>
                             <div className="w-full md:w-1/2 px-4">
@@ -67,7 +68,7 @@ const SignUP:React.FC = () => {
                                             <path d="M17.8815 9.37104C17.7482 9.17371 17.4878 9.12821 17.3003 9.26695L7.58655 16.4918L5.75235 14.5655C5.58942 14.3944 5.32608 14.3944 5.16322 14.5655C5.00028 14.7365 5.00028 15.013 5.16322 15.1841L7.24655 17.3716C7.32695 17.456 7.43362 17.4998 7.54115 17.4998C7.62488 17.4998 7.70868 17.4731 7.78282 17.4193L17.7828 9.98179C17.9703 9.84137 18.0141 9.56837 17.8815 9.37104Z" fill="black"></path>
                                         </svg>
                                     </span>
-                                    <input className="w-full pr-6 pl-4 py-4 bg-transparent font-bold placeholder-gray-900 rounded-r-full focus:outline-none" type="password" placeholder="Confirme a senha" />
+                                    <InputCustom type="password" placeholder="Confirme a senha" />
                                 </div>
                             </div>
                             <div className=" w-full px-4 my-3">
