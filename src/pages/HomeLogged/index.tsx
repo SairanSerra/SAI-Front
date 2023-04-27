@@ -57,7 +57,10 @@ const HomeLogged: React.FC = () => {
                     </div>
                 </div>
             </section>
-            <Footer  /> 
+            <div className="my-60">
+                <Footer   />   
+            </div>
+            
         </div>
     );
 
