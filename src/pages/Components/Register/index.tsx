@@ -1,13 +1,13 @@
 import React from 'react';
-import Footer from '../../components/Layout/Footer';
+import Footer from '../../../components/Layout/Footer';
 import ImageMen from '../../assets/men-stars.png';
 import ImageCircle from '../../assets/circle.svg';
 import ImagePurpleLine from '../../assets/purple-line.svg';
 import DropdownCustom from '../../components/Dropdown';
 import { ItemsDropdownSignUP } from './utils/itemsDropdown';
-import InputCustom from '../../components/InputCustom';
+import InputCustom from '../../../components/InputCustom';
 
-const SignUP:React.FC = () => {
+const RegisterComponents:React.FC = () => {
     return(
         <div className="bg-gray-800">
         
@@ -87,4 +87,4 @@ const SignUP:React.FC = () => {
     );
 }
 
-export default SignUP;
+export default RegisterComponents;

@@ -53,7 +53,7 @@ const Product:React.FC = () => {
                                             </li>
                                             <li className="py-4 text-lg rounded-2xl bg-blue-50">10 Projetos</li>
                                         </ul>
-                                        <a className="inline-block px-12 py-4 text-white font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200" href="#">Em Breve</a>
+                                        <a className="inline-block px-12 py-4 text-white font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200 hover:cursor-pointer">Em Breve</a>
                                     </div>
                                 </div>
                                 <div className="w-full lg:w-1/3 px-2">
@@ -84,7 +84,7 @@ const Product:React.FC = () => {
                                             </li>
                                             <li className="py-4 text-lg rounded-2xl bg-blue-50">100+ Projetos</li>
                                         </ul>
-                                        <a className="inline-block px-12 py-4 text-white font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200" href="#">Em Breve</a>
+                                        <a className="inline-block px-12 py-4 text-white font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200 hover:cursor-pointer">Em Breve</a>
                                     </div>
                                 </div>
                             </div>

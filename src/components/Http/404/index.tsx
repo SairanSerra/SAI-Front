@@ -9,7 +9,7 @@ import { useNavigate } from "react-router-dom";
 const StatusNotFound:React.FC = () => {
     const navigate = useNavigate();
     return(
-        <div className="h-screen bg-gray-800">
+        <div className="h-full-screen bg-gray-800">
         
             <section className="relative py-20 2xl:py-40 bg-gray-800 overflow-hidden mb-5">
                 <img className="absolute top-0 right-0 md:-mr-96 md:-mt-112" src={ImageCircle} alt="" />
@@ -26,7 +26,7 @@ const StatusNotFound:React.FC = () => {
                     </div>
                 </div>
             </section>
-            <div className="my-50">
+            <div >
                 <Footer />  
             </div>
             

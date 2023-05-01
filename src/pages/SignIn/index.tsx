@@ -6,7 +6,7 @@ import InputCustom from '../../components/InputCustom';
 const Login:React.FC = () => {
     const navigate = useNavigate();
     return(
-        <div>
+        <div className="bg-gray-800">
             <section className="relative py-20 2xl:py-40 bg-gray-800 overflow-hidden">
                 <img className="hidden lg:block absolute inset-0 mt-32" src="zospace-assets/lines/line-mountain.svg" alt="" />
                 <img className="hidden lg:block absolute inset-y-0 right-0 -mr-40 -mt-32" src="zospace-assets/lines/line-right-long.svg" alt="" />
