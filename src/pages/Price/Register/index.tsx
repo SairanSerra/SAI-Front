@@ -3,8 +3,7 @@ import Footer from '../../../components/Layout/Footer';
 import ImageMen from '../../assets/men-stars.png';
 import ImageCircle from '../../assets/circle.svg';
 import ImagePurpleLine from '../../assets/purple-line.svg';
-import DropdownCustom from '../../components/Dropdown';
-import { ItemsDropdownSignUP } from './utils/itemsDropdown';
+import DropdownCustom from '../../../components/Dropdown';
 import InputCustom from '../../../components/InputCustom';
 
 const RegisterPrice:React.FC = () => {
@@ -72,7 +71,7 @@ const RegisterPrice:React.FC = () => {
                                 </div>
                             </div>
                             <div className=" w-full px-4 my-3">
-                                <DropdownCustom elements={ItemsDropdownSignUP()} />
+                                {/* <DropdownCustom elements={ItemsDropdownSignUP()} /> */}
                             </div>
                         </div>
                         <div className='flex w-2/5 justify-center'>

@@ -9,6 +9,7 @@ import SignUP from '../pages/SignUp';
 import ProductHome from '../pages/Home/Product';
 import HomeLogged from '../pages/HomeLogged';
 import HTTP404 from '../components/Http/404';
+import RoutesComponents from '../routes/components';
 
 const PrincipalRoutes:React.FC = () => (
 
@@ -22,6 +23,7 @@ const PrincipalRoutes:React.FC = () => (
             <Route path="/home/product" element={<ProductHome />} />
             <Route path="/principal" element={<HomeLogged />} />
             <Route path="*" element={<HTTP404 />} />
+            <Route path="/components/*" element={<RoutesComponents />} />
         </Routes>
     </BrowserRouter>
 
