@@ -1,7 +1,10 @@
 import React from 'react';
 import Footer from '../../components/Layout/Footer';
+import { useNavigate } from 'react-router-dom';
+
 
 const HomeLogged: React.FC = () => {
+    const navigate = useNavigate();
 
     return(
         <div className="h-screen bg-gray-800">
@@ -12,7 +15,7 @@ const HomeLogged: React.FC = () => {
                     <div>
                         <div className="flex flex-wrap">
                             <div className="w-full lg:w-1/4 p-5 hover:scale-110 cursor-pointer transition ease-in-out delay-150">
-                                <div className="p-16 bg-gray-600 rounded-lg overflow-hidden text-center">
+                                <div onClick={() => navigate('/components/register')} className="p-16 bg-gray-600 rounded-lg overflow-hidden text-center">
                                     <span className="flex mb-8 justify-center items-center w-20 h-20 bg-gray-200 rounded-lg">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" className="bi bi-cpu text-white" viewBox="0 0 16 16">
                                             <path d="M5 0a.5.5 0 0 1 .5.5V2h1V.5a.5.5 0 0 1 1 0V2h1V.5a.5.5 0 0 1 1 0V2h1V.5a.5.5 0 0 1 1 0V2A2.5 2.5 0 0 1 14 4.5h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14a2.5 2.5 0 0 1-2.5 2.5v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14A2.5 2.5 0 0 1 2 11.5H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2A2.5 2.5 0 0 1 4.5 2V.5A.5.5 0 0 1 5 0zm-.5 3A1.5 1.5 0 0 0 3 4.5v7A1.5 1.5 0 0 0 4.5 13h7a1.5 1.5 0 0 0 1.5-1.5v-7A1.5 1.5 0 0 0 11.5 3h-7zM5 6.5A1.5 1.5 0 0 1 6.5 5h3A1.5 1.5 0 0 1 11 6.5v3A1.5 1.5 0 0 1 9.5 11h-3A1.5 1.5 0 0 1 5 9.5v-3zM6.5 6a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z"/>
