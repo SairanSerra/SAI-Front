@@ -26,7 +26,7 @@ const StatusNotFound:React.FC = () => {
                     </div>
                 </div>
             </section>
-            <div className="my-50">
+            <div >
                 <Footer />  
             </div>
             

@@ -1,13 +1,12 @@
 import React from 'react';
-import Footer from '../../components/Layout/Footer';
+import Footer from '../../../components/Layout/Footer';
 import ImageMen from '../../assets/men-stars.png';
 import ImageCircle from '../../assets/circle.svg';
 import ImagePurpleLine from '../../assets/purple-line.svg';
-import DropdownCustom from '../../components/Dropdown';
-import { ItemsDropdownSignUP } from './utils/itemsDropdown';
-import InputCustom from '../../components/InputCustom';
+import DropdownCustom from '../../../components/Dropdown';
+import InputCustom from '../../../components/InputCustom';
 
-const SignUP:React.FC = () => {
+const RegisterPraticalTest:React.FC = () => {
     return(
         <div className="bg-gray-800">
         
@@ -16,8 +15,7 @@ const SignUP:React.FC = () => {
                     <img className="hidden lg:block mt-64 ml-112" src={ImageCircle} alt="" />
                 </div>
                 <img className="hidden lg:block absolute h-128 bottom-0 right-0 z-10" src={ImageMen} alt="" />
-                <div className="hidden lg:block absolute w-full bottom-0 right-0 z-10 border-t border-gray-500" />
-                <img className="hidden lg:block absolute w-96 bottom-0 right-0 mr-64 mb-24 " src={ImagePurpleLine} alt="" />
+                <img className="hidden lg:block absolute w-96 bottom-0 right-0 mr-64 mb-24" src={ImagePurpleLine} alt="" />
                 <div className="relative container px-4 lg:py-20 mx-auto">
                     <span className="text-lg text-blue-400 font-bold">Vamos começar?</span>
                     <h2 className="mt-8 mb-16 text-5xl font-bold font-heading text-white">Registre sua conta!</h2>
@@ -73,7 +71,7 @@ const SignUP:React.FC = () => {
                                 </div>
                             </div>
                             <div className=" w-full px-4 my-3">
-                                <DropdownCustom elements={ItemsDropdownSignUP()} />
+                                {/* <DropdownCustom elements={ItemsDropdownSignUP()} /> */}
                             </div>
                         </div>
                         <div className='flex w-2/5 justify-center'>
@@ -83,9 +81,9 @@ const SignUP:React.FC = () => {
                     </form>
                 </div>
             </section>
-            <Footer separator={false} />
+            <Footer />
         </div>
     );
 }
 
-export default SignUP;
+export default RegisterPraticalTest;

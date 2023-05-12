@@ -1,18 +1,32 @@
 import React from 'react';
 import Footer from '../../components/Layout/Footer';
+import { useNavigate } from 'react-router-dom';
 
 const HomeLogged: React.FC = () => {
-
+    const navigate = useNavigate();
     return(
-        <div className="bg-gray-800 h-screen">
-            <section className="relative py-40 2xl:py-40 bg-gray-800 overflow-hidden">
+        <div className="h-screen bg-gray-800">
+            <section className="relative py-36 2xl:py-30 bg-gray-800 overflow-hidden">
                 <img className="hidden lg:block absolute top-0 left-0 h-screen -ml-96" src="zospace-assets/lines/circle.svg" alt="" />
                 <img className="hidden lg:block absolute top-0 right-0 mt-40 -mr-64" src="zospace-assets/lines/circle.svg" alt="" />
                 <div className="relative container px-4 mx-auto">
                     <div>
-                        <div className="flex flex-wrap -m-5">
-                            <div className="w-full lg:w-1/3 p-5 hover:scale-110 cursor-pointer transition ease-in-out delay-150">
-                                <div className="p-16 bg-gray-600 rounded-lg">
+                        <div className="flex flex-wrap">
+                            <div className="w-full lg:w-1/4 p-5 hover:scale-110 cursor-pointer transition ease-in-out delay-150" onClick={() => navigate('/components')}>
+                                <div className="p-16 bg-gray-600 rounded-lg overflow-hidden text-center">
+                                    <span className="flex mb-8 justify-center items-center w-20 h-20 bg-gray-200 rounded-lg">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" className="bi bi-cpu text-white" viewBox="0 0 16 16">
+                                            <path d="M5 0a.5.5 0 0 1 .5.5V2h1V.5a.5.5 0 0 1 1 0V2h1V.5a.5.5 0 0 1 1 0V2h1V.5a.5.5 0 0 1 1 0V2A2.5 2.5 0 0 1 14 4.5h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14a2.5 2.5 0 0 1-2.5 2.5v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14A2.5 2.5 0 0 1 2 11.5H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2A2.5 2.5 0 0 1 4.5 2V.5A.5.5 0 0 1 5 0zm-.5 3A1.5 1.5 0 0 0 3 4.5v7A1.5 1.5 0 0 0 4.5 13h7a1.5 1.5 0 0 0 1.5-1.5v-7A1.5 1.5 0 0 0 11.5 3h-7zM5 6.5A1.5 1.5 0 0 1 6.5 5h3A1.5 1.5 0 0 1 11 6.5v3A1.5 1.5 0 0 1 9.5 11h-3A1.5 1.5 0 0 1 5 9.5v-3zM6.5 6a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z"/>
+                                        </svg>
+                                    </span>
+                                    <p className="mb-8 text-3xl font-bold font-heading text-white">
+                                        <span>Componentes</span>
+                                    </p>
+                                    <p className="text-lg text-gray-200 leading-loose">Materias para produção.</p>
+                                </div>
+                            </div>
+                            <div className="w-full lg:w-1/4 p-5 hover:scale-110 cursor-pointer transition ease-in-out delay-150 flex justify-center" onClick={() => navigate('/prince')}>
+                                <div className="p-16 bg-gray-600 rounded-lg text-center ">
                                     <span className="flex mb-8 justify-center items-center w-20 h-20 bg-blue-500 rounded-lg">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" className="bi bi-cash-coin text-white" viewBox="0 0 16 16">
                                             <path fill-rule="evenodd" d="M11 15a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm5-4a5 5 0 1 1-10 0 5 5 0 0 1 10 0z"/>
@@ -21,43 +35,44 @@ const HomeLogged: React.FC = () => {
                                             <path d="M9.998 5.083 10 5a2 2 0 1 0-3.132 1.65 5.982 5.982 0 0 1 3.13-1.567z"/>
                                         </svg>
                                     </span>
-                                    <p className="mb-8 text-5xl font-bold font-heading text-white">
+                                    <p className="mb-8 text-3xl font-bold font-heading text-white">
                                         <span>Cotação</span>
                                     </p>
                                     <p className="text-lg text-gray-200 leading-loose">Setor de cotação de projeto.</p>
                                 </div>
                             </div>
-                            <div className="w-full lg:w-1/3 p-5 hover:scale-110 cursor-pointer transition ease-in-out delay-150">
-                                <div className="p-16 bg-gray-600 rounded-lg">
+                            <div className="w-full lg:w-1/4 p-5 hover:scale-110 cursor-pointer transition ease-in-out delay-150" onClick={() => navigate('/project')}>
+                                <div className="p-16 bg-gray-600 rounded-lg text-center">
                                     <span className="flex mb-10 justify-center items-center w-20 h-20 bg-violet-500 rounded-lg">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" className="bi bi-box-seam-fill text-white" viewBox="0 0 16 16">
                                             <path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.01-.003.268-.108a.75.75 0 0 1 .558 0l.269.108.01.003 6.97 2.789ZM10.404 2 4.25 4.461 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339L8 5.961 5.596 5l6.154-2.461L10.404 2Z"/>
                                         </svg>
                                     </span>
-                                    <p className="mb-8 text-5xl font-bold font-heading text-white">
+                                    <p className="mb-8 text-3xl font-bold font-heading text-white">
                                         <span>Projeto</span>
                                     </p>
                                     <p className="text-lg text-gray-200 leading-loose">Visualização do andamento do projeto.</p>
                                 </div>
                             </div>
-                            <div className="w-full lg:w-1/3 p-5 hover:scale-110 cursor-pointer transition ease-in-out delay-150">
-                                <div className="p-16 bg-gray-600 rounded-lg">
+                            <div className="w-full lg:w-1/4 p-5 hover:scale-110 cursor-pointer transition ease-in-out delay-150">
+                                <div className="p-16 bg-gray-600 rounded-lg text-center">
                                     <span className="flex mb-10 justify-center items-center w-20 h-20 bg-green-500 rounded-lg">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" className="bi bi-hammer text-white" viewBox="0 0 16 16">
                                             <path d="M9.972 2.508a.5.5 0 0 0-.16-.556l-.178-.129a5.009 5.009 0 0 0-2.076-.783C6.215.862 4.504 1.229 2.84 3.133H1.786a.5.5 0 0 0-.354.147L.146 4.567a.5.5 0 0 0 0 .706l2.571 2.579a.5.5 0 0 0 .708 0l1.286-1.29a.5.5 0 0 0 .146-.353V5.57l8.387 8.873A.5.5 0 0 0 14 14.5l1.5-1.5a.5.5 0 0 0 .017-.689l-9.129-8.63c.747-.456 1.772-.839 3.112-.839a.5.5 0 0 0 .472-.334z"/>
                                         </svg>
                                     </span>
-                                    <p className="mb-8 text-5xl font-bold font-heading text-white">
+                                    <p className="mb-8 text-3xl font-bold font-heading text-white">
                                         <span>Prova Prática</span>
                                     </p>
                                     <p className="text-lg text-gray-200 leading-loose">Teste final do produto desenvolvido.</p>
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </div>
             </section>
-            <div className="my-60">
+            <div className="my-20">
                 <Footer   />   
             </div>
             
