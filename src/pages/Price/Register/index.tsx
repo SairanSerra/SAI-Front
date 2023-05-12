@@ -1,14 +1,14 @@
 import React from 'react';
 import Footer from '../../../components/Layout/Footer';
-import ImageMen from '../../assets/men-stars.png';
-import ImageCircle from '../../assets/circle.svg';
-import ImagePurpleLine from '../../assets/purple-line.svg';
+import ImageMen from '../../../assets/men-stars.png';
+import ImageCircle from '../../../assets/circle.svg';
+import ImagePurpleLine from '../../../assets/purple-line.svg';
 import DropdownCustom from '../../../components/Dropdown';
 import InputCustom from '../../../components/InputCustom';
 
 const RegisterPrice:React.FC = () => {
     return(
-        <div className="bg-gray-800">
+        <div className="h-screen w-full bg-gray-800">
         
             <section className="relative py-20 2xl:py-15 overflow-hidden bg-gray-800">
                 <div className="absolute top-0 left-0 lg:bottom-0 h-full w-full lg:w-10/12 lg:overflow-hidden">

@@ -1,8 +1,9 @@
 import React from 'react';
 import Footer from '../../components/Layout/Footer';
+import { useNavigate } from 'react-router-dom';
 
 const HomeLogged: React.FC = () => {
-
+    const navigate = useNavigate();
     return(
         <div className="h-screen bg-gray-800">
             <section className="relative py-36 2xl:py-30 bg-gray-800 overflow-hidden">
@@ -11,7 +12,7 @@ const HomeLogged: React.FC = () => {
                 <div className="relative container px-4 mx-auto">
                     <div>
                         <div className="flex flex-wrap">
-                            <div className="w-full lg:w-1/4 p-5 hover:scale-110 cursor-pointer transition ease-in-out delay-150">
+                            <div className="w-full lg:w-1/4 p-5 hover:scale-110 cursor-pointer transition ease-in-out delay-150" onClick={() => navigate('/components')}>
                                 <div className="p-16 bg-gray-600 rounded-lg overflow-hidden text-center">
                                     <span className="flex mb-8 justify-center items-center w-20 h-20 bg-gray-200 rounded-lg">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" className="bi bi-cpu text-white" viewBox="0 0 16 16">
@@ -24,7 +25,7 @@ const HomeLogged: React.FC = () => {
                                     <p className="text-lg text-gray-200 leading-loose">Materias para produção.</p>
                                 </div>
                             </div>
-                            <div className="w-full lg:w-1/4 p-5 hover:scale-110 cursor-pointer transition ease-in-out delay-150 flex justify-center">
+                            <div className="w-full lg:w-1/4 p-5 hover:scale-110 cursor-pointer transition ease-in-out delay-150 flex justify-center" onClick={() => navigate('/prince')}>
                                 <div className="p-16 bg-gray-600 rounded-lg text-center ">
                                     <span className="flex mb-8 justify-center items-center w-20 h-20 bg-blue-500 rounded-lg">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" className="bi bi-cash-coin text-white" viewBox="0 0 16 16">
@@ -40,7 +41,7 @@ const HomeLogged: React.FC = () => {
                                     <p className="text-lg text-gray-200 leading-loose">Setor de cotação de projeto.</p>
                                 </div>
                             </div>
-                            <div className="w-full lg:w-1/4 p-5 hover:scale-110 cursor-pointer transition ease-in-out delay-150">
+                            <div className="w-full lg:w-1/4 p-5 hover:scale-110 cursor-pointer transition ease-in-out delay-150" onClick={() => navigate('/project')}>
                                 <div className="p-16 bg-gray-600 rounded-lg text-center">
                                     <span className="flex mb-10 justify-center items-center w-20 h-20 bg-violet-500 rounded-lg">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" className="bi bi-box-seam-fill text-white" viewBox="0 0 16 16">

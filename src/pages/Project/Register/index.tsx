@@ -1,27 +1,26 @@
 import React from 'react';
 import Footer from '../../../components/Layout/Footer';
-import ImageMen from '../../assets/men-stars.png';
-import ImageCircle from '../../assets/circle.svg';
-import ImagePurpleLine from '../../assets/purple-line.svg';
 import DropdownCustom from '../../../components/Dropdown';
-
 import InputCustom from '../../../components/InputCustom';
+import { ElementClassificationClient } from '../utils/elementSelect';
+import { useNavigate } from 'react-router-dom';
 
 const RegisterProject:React.FC = () => {
+    const navigate = useNavigate();
     return(
-        <div className="bg-gray-800">
+        <div className="h-screen bg-gray-800">
         
             <section className="relative py-20 2xl:py-15 overflow-hidden bg-gray-800">
                 <div className="absolute top-0 left-0 lg:bottom-0 h-full w-full lg:w-10/12 lg:overflow-hidden">
-                    <img className="hidden lg:block mt-64 ml-112" src={ImageCircle} alt="" />
+                    {/* <img className="hidden lg:block mt-64 ml-112" src={ImageCircle} alt="" /> */}
                 </div>
-                <img className="hidden lg:block absolute h-128 bottom-0 right-0 z-10" src={ImageMen} alt="" />
-                <img className="hidden lg:block absolute w-96 bottom-0 right-0 mr-64 mb-24" src={ImagePurpleLine} alt="" />
+                {/* <img className="hidden lg:block absolute h-128 bottom-0 right-0 z-10" src={ImageMen} alt="" />
+                <img className="hidden lg:block absolute w-96 bottom-0 right-0 mr-64 mb-24" src={ImagePurpleLine} alt="" /> */}
                 <div className="relative container px-4 lg:py-20 mx-auto">
-                    <span className="text-lg text-blue-400 font-bold">Vamos começar?</span>
-                    <h2 className="mt-8 mb-16 text-5xl font-bold font-heading text-white">Registre sua conta!</h2>
+                    <span className="text-lg text-blue-400 font-bold">SAI Tecnologia</span>
+                    <h2 className="mt-8 mb-16 text-5xl font-bold font-heading text-white">Cadastro de Projeto</h2>
                     <form action="#">
-                        <div className="max-w-2xl flex flex-wrap -mx-4 mb-3">
+                        <div className="max-w-2xl flex flex-wrap -mx-4 mb-3 ml-4">
                             <div className="w-full md:w-1/2 px-4">
                                 <div className="flex items-center pl-6 mb-3 bg-white rounded-full">
                                     <span className="inline-block pr-3 border-r border-gray-50">
@@ -32,7 +31,7 @@ const RegisterProject:React.FC = () => {
                                             <path d="M10.4997 17.4966C8.70684 17.4966 6.91397 16.8141 5.54984 15.45C5.37922 15.2793 5.37922 15.002 5.54984 14.8313C5.72047 14.6607 5.99784 14.6607 6.16847 14.8313C8.55722 17.2192 12.4422 17.2192 14.831 14.8313C15.0016 14.6607 15.279 14.6607 15.4496 14.8313C15.6202 15.002 15.6202 15.2793 15.4496 15.45C14.0855 16.8141 12.2926 17.4966 10.4997 17.4966Z" fill="black"></path>
                                         </svg>
                                     </span>
-                                    <InputCustom type="text" placeholder="Nome" />
+                                    <InputCustom type="text" placeholder="Código" />
                                 </div>
                             </div>
                             <div className="w-full md:w-1/2 px-4">
@@ -44,20 +43,22 @@ const RegisterProject:React.FC = () => {
                                             <rect x="15" y="15" width="5" height="1" rx="0.5" fill="black"></rect><rect x="17" y="18" width="5" height="1" rx="0.5" transform="rotate(-90 17 18)" fill="black"></rect>
                                         </svg>
                                     </span>
-                                    <InputCustom type="email" placeholder="exemplo@exemplo.com" />
+                                    <InputCustom type="date" placeholder="Data Requisição" maxLength={8} />
                                 </div>
                             </div>
                         </div>
-                        <div className="max-w-2xl flex flex-wrap -mx-4 mb-12">
-                            <div className="w-full md:w-1/2 px-4">
-                                <div className="flex items-center pl-6 mb-3 bg-white rounded-full">
-                                    <span className="inline-block pr-3 border-r border-gray-50">
+                        <div className="max-w-3xl flex flex-wrap -mx-4 mb-12">
+                            <div className="w-96 px-4">
+                                <div className="flex items-center pl-6 mb-3 ">
+                                    {/* <span className="inline-block pr-3 border-r border-gray-50">
                                         <svg className="w-5 h-5" width="17" height="21" viewBox="0 0 17 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M15.184 8.48899H15.2011V6.25596C15.2011 2.6897 12.3193 0 8.49924 0C4.67919 0 1.7974 2.6897 1.7974 6.25596V8.48899H1.81568C0.958023 9.76774 0.457031 11.3049 0.457031 12.9569C0.457031 17.3921 4.06482 21 8.49924 21C12.9341 21 16.5424 17.3922 16.5428 12.9569C16.5428 11.3049 16.0417 9.76774 15.184 8.48899ZM2.69098 6.25596C2.69098 3.14895 5.13312 0.893578 8.49924 0.893578C11.8654 0.893578 14.3075 3.14895 14.3075 6.25596V7.39905C12.8423 5.86897 10.7804 4.91468 8.49966 4.91468C6.21837 4.91468 4.15607 5.86946 2.69098 7.40017V6.25596ZM8.49966 20.1064C4.55762 20.1064 1.35061 16.8989 1.35061 12.9569C1.35061 9.01534 4.5572 5.80826 8.49924 5.80826C12.4422 5.80826 15.6488 9.01534 15.6492 12.9569C15.6492 16.8989 12.4426 20.1064 8.49966 20.1064Z" fill="black"></path>
                                             <path d="M8.49957 8.93555C7.26775 8.93555 6.26562 9.93767 6.26562 11.1695C6.26562 11.8678 6.60247 12.5282 7.1592 12.9473V14.7438C7.1592 15.4828 7.76062 16.0842 8.49957 16.0842C9.2381 16.0842 9.83994 15.4828 9.83994 14.7438V12.9473C10.3966 12.5277 10.7335 11.8678 10.7335 11.1695C10.7335 9.93767 9.7309 8.93555 8.49957 8.93555ZM9.16793 12.3227C9.03032 12.4022 8.94636 12.5501 8.94636 12.7087V14.7438C8.94636 14.9904 8.74572 15.1906 8.49957 15.1906C8.25342 15.1906 8.05278 14.9904 8.05278 14.7438V12.7087C8.05278 12.5501 7.96833 12.4031 7.83072 12.3227C7.41026 12.0778 7.1592 11.6467 7.1592 11.1695C7.1592 10.4305 7.76062 9.82913 8.49957 9.82913C9.2381 9.82913 9.83994 10.4305 9.83994 11.1695C9.83994 11.6467 9.58881 12.0778 9.16793 12.3227Z" fill="black"></path>
                                         </svg>
-                                    </span>
-                                    <InputCustom type="password" placeholder="Senha" />
+                                    </span> */}
+                                    
+                                    <DropdownCustom elements={ElementClassificationClient()} />
+
                                 </div>
                             </div>
                             <div className="w-full md:w-1/2 px-4">
@@ -68,15 +69,14 @@ const RegisterProject:React.FC = () => {
                                             <path d="M17.8815 9.37104C17.7482 9.17371 17.4878 9.12821 17.3003 9.26695L7.58655 16.4918L5.75235 14.5655C5.58942 14.3944 5.32608 14.3944 5.16322 14.5655C5.00028 14.7365 5.00028 15.013 5.16322 15.1841L7.24655 17.3716C7.32695 17.456 7.43362 17.4998 7.54115 17.4998C7.62488 17.4998 7.70868 17.4731 7.78282 17.4193L17.7828 9.98179C17.9703 9.84137 18.0141 9.56837 17.8815 9.37104Z" fill="black"></path>
                                         </svg>
                                     </span>
-                                    <InputCustom type="password" placeholder="Confirme a senha" />
+                                    {/* Adicionar dropdown com requisição no backend */}
+                                    <InputCustom type="text" placeholder="Cliente" />
                                 </div>
-                            </div>
-                            <div className=" w-full px-4 my-3">
-                                {/* <DropdownCustom elements={ItemsDropdownSignUP()} /> */}
                             </div>
                         </div>
                         <div className='flex w-2/5 justify-center'>
-                            <button className="block w-full lg:w-auto py-4 px-12 bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-full transition duration-200">Criar Conta</button>  
+                            <button className="block w-full lg:w-auto me-4 py-4 px-12 text-white text-center font-bold border border-gray-50 hover:border-gray-300 rounded-full cursor-pointer" onClick={() => navigate('/project')}>Cancelar</button> 
+                            <button className="block w-full lg:w-auto py-4 px-12 bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-full transition duration-200">Salvar</button>
                         </div>
                         
                     </form>

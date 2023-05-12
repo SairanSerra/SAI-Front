@@ -16,7 +16,8 @@ const SignUP:React.FC = () => {
                     <img className="hidden lg:block mt-64 ml-112" src={ImageCircle} alt="" />
                 </div>
                 <img className="hidden lg:block absolute h-128 bottom-0 right-0 z-10" src={ImageMen} alt="" />
-                <img className="hidden lg:block absolute w-96 bottom-0 right-0 mr-64 mb-24" src={ImagePurpleLine} alt="" />
+                <div className="hidden lg:block absolute w-full bottom-0 right-0 z-10 border-t border-gray-500" />
+                <img className="hidden lg:block absolute w-96 bottom-0 right-0 mr-64 mb-24 " src={ImagePurpleLine} alt="" />
                 <div className="relative container px-4 lg:py-20 mx-auto">
                     <span className="text-lg text-blue-400 font-bold">Vamos começar?</span>
                     <h2 className="mt-8 mb-16 text-5xl font-bold font-heading text-white">Registre sua conta!</h2>
@@ -82,7 +83,7 @@ const SignUP:React.FC = () => {
                     </form>
                 </div>
             </section>
-            <Footer />
+            <Footer separator={false} />
         </div>
     );
 }
