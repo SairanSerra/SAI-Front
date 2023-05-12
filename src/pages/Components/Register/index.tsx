@@ -100,7 +100,7 @@ const RegisterComponents:React.FC = () => {
                                                 <rect x="15" y="15" width="5" height="1" rx="0.5" fill="black"></rect><rect x="17" y="18" width="5" height="1" rx="0.5" transform="rotate(-90 17 18)" fill="black"></rect>
                                             </svg>
                                         </span>
-                                        <InputCustom type="text" placeholder="CPP" />
+                                        <InputCustom type="text" placeholder="LPP" />
                                     </div>
                                 </div>
                                 <div className="w-full md:w-1/2 px-4 mt-3">
