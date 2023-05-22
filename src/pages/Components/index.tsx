@@ -5,18 +5,14 @@ import TD from "../../components/Table/components/TD";
 import Paginate from "../../components/Table/components/Paginate";
 import Footer from "../../components/Layout/Footer";
 import InputCustom from "../../components/InputCustom";
-import { useNavigate } from "react-router-dom";
-import { useQuery } from "react-query";
-import { getComponents } from "../../services/components";
+import useComponents from "./hooks/useComponents";
+import { HeaderTableComponents } from "../../constants/components/headerTable";
 
 const HomeComponents:React.FC = () => {
 
-    const {data, isLoading} = useQuery(['getComponents'], () => getComponents())
-
-    const mocHeader = ['Part Number','Nome','Modelo','Fabricante','Dimensão'];
+    const {data,isLoading,navigate} = useComponents()
     console.log(data)
     console.log(isLoading)
-    const navigate = useNavigate();
     return(
             
         <div className="w-full h-screen bg-gray-800">
@@ -38,7 +34,7 @@ const HomeComponents:React.FC = () => {
                 </div>
             </div>
             
-            {/* <TableCustom header={mocHeader} content={modData}>
+            {/* <TableCustom header={mocHeader} content={HeaderTableComponents}>
                 {modData.map((element, index) => (
                     <TR index={index}>
                         <TD index={index}>{element.id}</TD>
