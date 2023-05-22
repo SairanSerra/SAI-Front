@@ -38,7 +38,7 @@ const HomeComponents:React.FC = () => {
                 </div>
             </div>
             
-            <TableCustom header={mocHeader} content={modData}>
+            {/* <TableCustom header={mocHeader} content={modData}>
                 {modData.map((element, index) => (
                     <TR index={index}>
                         <TD index={index}>{element.id}</TD>
@@ -48,7 +48,7 @@ const HomeComponents:React.FC = () => {
                         <TD index={index}>{element.test2}</TD>
                     </TR>
                 ))}
-            </TableCustom>
+            </TableCustom> */}
             <div className="bg-gray-800 pb-3">
                 <Paginate numberpages={10} atualpage={1}  />
             </div>
