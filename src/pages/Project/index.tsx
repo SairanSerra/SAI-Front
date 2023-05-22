@@ -17,29 +17,7 @@ const Project:React.FC = () => {
             age:'20',
             test1:'test1',
             test2:'test2'
-        },
-        {
-            id:1,
-            name:'João',
-            age:'20',
-            test1:'test1',
-            test2:'test2'
-        },
-        {
-            id:1,
-            name:'João',
-            age:'20',
-            test1:'test1',
-            test2:'test2'
-        },
-        {
-            id:1,
-            name:'João',
-            age:'20',
-            test1:'test1',
-            test2:'test2'
-        },
-    
+        }    
     ];
     return(
                 
