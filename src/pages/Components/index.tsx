@@ -34,17 +34,17 @@ const HomeComponents:React.FC = () => {
                 </div>
             </div>
             
-            {/* <TableCustom header={mocHeader} content={HeaderTableComponents}>
-                {modData.map((element, index) => (
+            <TableCustom header={HeaderTableComponents} content={HeaderTableComponents}>
+                {HeaderTableComponents.map((element, index) => (
                     <TR index={index}>
-                        <TD index={index}>{element.id}</TD>
+                        {/* <TD index={index}>{element.id}</TD>
                         <TD index={index}>{element.name}</TD>
                         <TD index={index}>{element.age}</TD>
                         <TD index={index}>{element.test1}</TD>
-                        <TD index={index}>{element.test2}</TD>
+                        <TD index={index}>{element.test2}</TD> */}
                     </TR>
                 ))}
-            </TableCustom> */}
+            </TableCustom>
             <div className="bg-gray-800 pb-3">
                 <Paginate numberpages={10} atualpage={1}  />
             </div>
