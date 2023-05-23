@@ -34,16 +34,18 @@ const HomeComponents:React.FC = () => {
                 </div>
             </div>
             
-            <TableCustom header={HeaderTableComponents} content={HeaderTableComponents}>
-                {HeaderTableComponents.map((element, index) => (
-                    <TR index={index}>
-                        {/* <TD index={index}>{element.id}</TD>
-                        <TD index={index}>{element.name}</TD>
-                        <TD index={index}>{element.age}</TD>
-                        <TD index={index}>{element.test1}</TD>
-                        <TD index={index}>{element.test2}</TD> */}
-                    </TR>
-                ))}
+            <TableCustom header={HeaderTableComponents} content={data!.recordset!}>
+                {data!.recordset !== undefined ? <TD index={0}>Sem dados</TD>  : 
+                    data!.recordset!.map((element, index) => (
+                        <TR index={index}>
+                            <TD index={index}>{element.ds_Nome}</TD>
+                            <TD index={index}>{element.ds_Nome}</TD>
+                            <TD index={index}>{element.ds_Nome}</TD>
+                            <TD index={index}>{element.ds_Nome}</TD>
+                            <TD index={index}>{element.ds_Nome}</TD>
+                        </TR>
+                    ))}
+                {}
             </TableCustom>
             <div className="bg-gray-800 pb-3">
                 <Paginate numberpages={10} atualpage={1}  />
