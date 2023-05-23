@@ -9,6 +9,7 @@ import IconPrice from './Icons/IconPrice';
 import IconDraft from './Icons/IconDraft';
 import IconName from './Icons/IconName';
 import IconSize from './Icons/IconSize';
+import InputFileCustom from '../../../components/InputFile';
 const RegisterComponents:React.FC = () => {
     return(
         <div className="h-screen bg-gray-800">        
@@ -80,6 +81,9 @@ const RegisterComponents:React.FC = () => {
                                         <IconNumber />
                                         <InputCustom type="text" placeholder="Número de padronização" />
                                     </div>
+                                </div>
+                                <div>
+                                    <InputFileCustom />
                                 </div>
                             </div>
                             <img className="hidden lg:block " src={PecaMecanica} alt=""style={{height: '300px', width: '300px'}} />
