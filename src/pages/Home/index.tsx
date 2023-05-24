@@ -6,8 +6,8 @@ import { useNavigate } from 'react-router-dom';
 const Home:React.FC = () => {
     const navigate = useNavigate();
     return(
-        <div>        
-            <section className="pb-20 bg-gray-800">
+        <div className='h-full bg-gray-800'>        
+            <section className="pb-20 ">
                 <nav className="relative">
                     <div className="flex py-8 px-4 lg:px-8 justify-between items-center">
                         <div className="text-2xl" />
@@ -68,11 +68,12 @@ const Home:React.FC = () => {
                             >Cadastre-se</a> */}
                         </div>
                             
-                        <p className="mt-6 mb-4 text-lg text-center">
+                        <p className=" mb-4 text-lg text-center">
                             <span>2023 © SAI. Todos direitos reservados.</span>
                         </p>
                     </div>
                 </div>
+                
             </div>
             <Footer />
         </div> 

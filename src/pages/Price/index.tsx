@@ -44,7 +44,7 @@ const HomePrince:React.FC = () => {
         <div className="w-full h-screen bg-gray-800">
                 
             <div className="flex justify-end me-10 pt-14">
-                <button className="block w-full lg:w-auto py-4 px-12 bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-full transition duration-200">Cadastrar Cotação</button>  
+                <button className="block w-auto py-4 px-12 bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-full transition duration-200">Cadastrar Cotação</button>  
             </div>
             <div className="flex justify-left ms-48">
                 <div className="w-full md:w-1/4 px-4 mt-20">

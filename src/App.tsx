@@ -4,12 +4,20 @@ import { QueryClient, QueryClientProvider } from 'react-query'
 
 const App:React.FC = () => {
 
-    const queryClient = new QueryClient()
+    const queryClient = new QueryClient({
+        defaultOptions:{
+            queries:{
+                refetchOnWindowFocus: false
+            }
+        }
+    })
 
     return (
-        <QueryClientProvider client={queryClient} >
-            <PrincipalRoutes />  
-        </QueryClientProvider>
+        <div>
+            <QueryClientProvider client={queryClient} >
+                <PrincipalRoutes />  
+            </QueryClientProvider>
+        </div>
         
     )
 }

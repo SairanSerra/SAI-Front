@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
 import React from "react";
 import TableCustom from "../../components/Table";
 import TR from "../../components/Table/components/TR";
@@ -18,7 +19,7 @@ const HomeComponents:React.FC = () => {
         <div className="w-full h-screen bg-gray-800">
             
             <div className="flex justify-end me-10 pt-14">
-                <button className="block w-full lg:w-auto py-4 px-12 bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-full transition duration-200"
+                <button className="block w-auto py-4 px-12 bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-full transition duration-200"
                     onClick={() => navigate('/components/register')}>
                     Novo Componente</button>  
             </div>
@@ -35,8 +36,8 @@ const HomeComponents:React.FC = () => {
             </div>
             
             <TableCustom header={HeaderTableComponents} content={data!.recordset!}>
-                {data!.recordset === undefined ? <TD index={0}>Sem dados</TD>  : 
-                    data!.recordset!.map((element, index) => (
+                {data?.recordset === undefined ? <TD index={0}>Sem dados</TD>  : 
+                    data?.recordset?.map((element, index) => (
                         <TR index={index}>
                             <TD index={index}>{element.cd_PN}</TD>
                             <TD index={index}>{element.ds_Nome}</TD>
