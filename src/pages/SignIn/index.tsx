@@ -2,8 +2,13 @@ import React from 'react';
 import Footer from '../../components/Layout/Footer';
 import { useNavigate } from 'react-router-dom';
 import InputCustom from '../../components/InputCustom';
+import { Controller } from 'react-hook-form';
+import useSignIn from './hooks/useSignIn';
 
 const Login:React.FC = () => {
+    const {
+        errors, handleSubmit, control, HandleLogin,
+    } = useSignIn();
     const navigate = useNavigate();
     return(
         <div className="bg-gray-800">
@@ -33,7 +38,12 @@ const Login:React.FC = () => {
                                                     <rect x="15" y="15" width="5" height="1" rx="0.5" fill="black"></rect><rect x="17" y="18" width="5" height="1" rx="0.5" transform="rotate(-90 17 18)" fill="black"></rect>
                                                 </svg>
                                             </span>
-                                            <InputCustom type="email" placeholder="exemplo@exemplo.com" />
+                                            <Controller
+                                                name="email"
+                                                control={control}
+                                                rules={{ required: true, pattern: /^[A-Za-z0-9.\-_]+@[A-Za-z0-9]{2,}.[A-Za-z0-9]{2,3}.([a-z0-9]{2,})()?$/ }}
+                                                render={({ field: { onChange, value } }) => (
+                                                    <InputCustom  onChange={onChange} value={value} error={errors.email !== undefined} type="email" placeholder="exemplo@exemplo.com" />)}/>
                                         </div>
                                         <div className="flex items-center pl-6 mb-3 bg-white rounded-full">
                                             <span className="inline-block pr-3 py-2 border-r border-gray-50">
@@ -42,11 +52,16 @@ const Login:React.FC = () => {
                                                     <path d="M8.49957 8.93567C7.26775 8.93567 6.26562 9.93779 6.26562 11.1696C6.26562 11.8679 6.60247 12.5283 7.1592 12.9474V14.7439C7.1592 15.4829 7.76062 16.0843 8.49957 16.0843C9.2381 16.0843 9.83994 15.4829 9.83994 14.7439V12.9474C10.3966 12.5278 10.7335 11.8679 10.7335 11.1696C10.7335 9.93779 9.7309 8.93567 8.49957 8.93567ZM9.16793 12.3228C9.03032 12.4023 8.94636 12.5502 8.94636 12.7088V14.7439C8.94636 14.9906 8.74572 15.1907 8.49957 15.1907C8.25342 15.1907 8.05278 14.9906 8.05278 14.7439V12.7088C8.05278 12.5502 7.96833 12.4032 7.83072 12.3228C7.41026 12.078 7.1592 11.6468 7.1592 11.1696C7.1592 10.4307 7.76062 9.82925 8.49957 9.82925C9.2381 9.82925 9.83994 10.4307 9.83994 11.1696C9.83994 11.6468 9.58881 12.078 9.16793 12.3228Z" fill="black"></path>
                                                 </svg>
                                             </span>
-                                            <InputCustom type="password" placeholder="Senha" />
+                                            <Controller
+                                                name="password"
+                                                control={control}
+                                                rules={{ required: true }}
+                                                render={({ field: { onChange, value } }) => (
+                                                    <InputCustom onChange={onChange} value={value} error={errors.password !== undefined} type="password" placeholder="Senha" />)}/>
                                         </div>
                                         <div className="flex items-center pl-6 mb-6 bg-white rounded-full">                
                                         </div>
-                                        <button className="py-4 w-full bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-full transition duration-200">Entrar</button>
+                                        <button onClick={handleSubmit(HandleLogin)} className="py-4 w-full bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-full transition duration-200">Entrar</button>
                                         <a className="block mb-4 py-4 px-12 my-5 text-white text-center font-bold border border-gray-50 hover:border-gray-300 rounded-full cursor-pointer" 
                                             onClick={() => navigate('/signup')}>Cadastre-se</a>
                                     </form>
