@@ -1,10 +1,10 @@
 import React from 'react';
 import Footer from '../../components/Layout/Footer';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 import InputCustom from '../../components/InputCustom';
 
 const Login:React.FC = () => {
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
     return(
         <div className="h-screen bg-gray-800">
             <section className="relative py-20 2xl:py-40 bg-gray-800 overflow-hidden">

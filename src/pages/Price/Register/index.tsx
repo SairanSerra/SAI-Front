@@ -3,7 +3,7 @@ import Footer from '../../../components/Layout/Footer';
 import ImageMen from '../../../assets/men-stars.png';
 import ImageCircle from '../../../assets/circle.svg';
 import ImagePurpleLine from '../../../assets/purple-line.svg';
-import DropdownCustom from '../../../components/Dropdown';
+// import DropdownCustom from '../../../components/Dropdown';
 import InputCustom from '../../../components/InputCustom';
 
 const RegisterPrice:React.FC = () => {
