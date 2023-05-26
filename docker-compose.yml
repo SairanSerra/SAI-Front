@@ -6,4 +6,4 @@ services:
     build: .
     container_name: sai-front
     ports:
-      - 3000:3000
+      - 4001:4001
