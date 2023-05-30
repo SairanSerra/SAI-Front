@@ -11,7 +11,7 @@ const Login:React.FC = () => {
     } = useSignIn();
     const navigate = useNavigate();
     return(
-        <div className="bg-gray-800">
+        <div className="h-screen bg-gray-800">
             <section className="relative py-20 2xl:py-40 bg-gray-800 overflow-hidden">
                 <img className="hidden lg:block absolute inset-0 mt-32" src="zospace-assets/lines/line-mountain.svg" alt="" />
                 <img className="hidden lg:block absolute inset-y-0 right-0 -mr-40 -mt-32" src="zospace-assets/lines/line-right-long.svg" alt="" />
@@ -61,9 +61,15 @@ const Login:React.FC = () => {
                                         </div>
                                         <div className="flex items-center pl-6 mb-6 bg-white rounded-full">                
                                         </div>
+<<<<<<< HEAD
                                         <button onClick={handleSubmit(HandleLogin)} className="py-4 w-full bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-full transition duration-200">Entrar</button>
                                         <a className="block mb-4 py-4 px-12 my-5 text-white text-center font-bold border border-gray-50 hover:border-gray-300 rounded-full cursor-pointer" 
                                             onClick={() => navigate('/signup')}>Cadastre-se</a>
+=======
+                                        <button className="py-4 w-full bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-full transition duration-200">Entrar</button>
+                                        {/* <a className="block mb-4 py-4 px-12 my-5 text-white text-center font-bold border border-gray-50 hover:border-gray-300 rounded-full cursor-pointer" 
+                                            onClick={() => navigate('/signup')}>Cadastre-se</a> */}
+>>>>>>> 594ec7f67f4c79a47938aec67bda5ea9b56422bf
                                     </form>
                                 </div>
                             </div>
@@ -71,7 +77,10 @@ const Login:React.FC = () => {
                     </div>
                 </div>
             </section>
-            <Footer />
+            <div className='mt-14'>
+                <Footer /> 
+            </div>
+            
         </div>
     );
 }

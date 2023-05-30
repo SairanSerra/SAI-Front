@@ -6,8 +6,8 @@ import { useNavigate } from 'react-router-dom';
 const Home:React.FC = () => {
     const navigate = useNavigate();
     return(
-        <div>        
-            <section className="pb-20 bg-gray-800">
+        <div className='h-full bg-gray-800'>        
+            <section className="pb-20 ">
                 <nav className="relative">
                     <div className="flex py-8 px-4 lg:px-8 justify-between items-center">
                         <div className="text-2xl" />
@@ -40,8 +40,8 @@ const Home:React.FC = () => {
                             <span className="text-lg font-bold text-blue-400">Gerenciamento de Ferramentaria</span>
                             <h2 className="max-w-2xl mt-12 mb-12 text-6xl 2xl:text-8xl text-white font-bold font-heading">Ferramenta de qualidade para resultados excelentes.</h2>
                             <p className="mb-12 lg:mb-16 2xl:mb-24 text-xl text-gray-100">Para facilitar a gestão do seu setor empresarial de ferramentaria</p>
-                            <a className="inline-block px-12 py-5 text-lg cursor-pointer text-white font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200" 
-                                onClick={() => navigate('/signup')}>Cadastre-se</a>
+                            {/* <a className="inline-block px-12 py-5 text-lg cursor-pointer text-white font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200" 
+                                onClick={() => navigate('/signup')}>Cadastre-se</a> */}
                         </div>
                         <div className="w-full lg:w-1/2 px-4">
                             <img className="w-full rounded backdrop-blur-lg" src={ImageToolShop} alt="" />
@@ -63,15 +63,17 @@ const Home:React.FC = () => {
                         <div className="pt-6">
                             <a className="block mb-4 py-4 px-12 my-5 text-white text-center font-bold border border-gray-50 hover:border-gray-300 rounded-full cursor-pointer" 
                                 onClick={() => navigate('/login')}>Entrar</a>
-                            <a className="block py-4 px-12 text-white text-center font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200"
+                            {/* <a className="block py-4 px-12 text-white text-center font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200"
                                 onClick={() => navigate('/signup')}
-                            >Cadastre-se</a></div>
+                            >Cadastre-se</a> */}
+                        </div>
                             
-                        <p className="mt-6 mb-4 text-lg text-center">
+                        <p className=" mb-4 text-lg text-center">
                             <span>2023 © SAI. Todos direitos reservados.</span>
                         </p>
                     </div>
                 </div>
+                
             </div>
             <Footer />
         </div> 

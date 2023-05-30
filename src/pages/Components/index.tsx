@@ -1,47 +1,25 @@
-import React, { useEffect, useState } from "react";
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
+import React from "react";
 import TableCustom from "../../components/Table";
 import TR from "../../components/Table/components/TR";
 import TD from "../../components/Table/components/TD";
 import Paginate from "../../components/Table/components/Paginate";
 import Footer from "../../components/Layout/Footer";
 import InputCustom from "../../components/InputCustom";
-import Axios from "axios";
-import { useNavigate } from "react-router-dom";
+import useComponents from "./hooks/useComponents";
+import { HeaderTableComponents } from "../../constants/components/headerTable";
 
 const HomeComponents:React.FC = () => {
-    const [listComponentes, setListComponentes] = useState([]);
 
-    const [busca, setBusca] = useState("");
-
-    useEffect(() => {
-        Axios.get("http://localhost:3001/getComponente").then((response) => {
-            setListComponentes(response.data.recordset);
-        });
-    }, []);
-
-    const lowerBusca = busca.toLowerCase();
-
-    const filterMaterial = listComponentes.filter((values) =>
-        values.ds_Nome.toLowerCase().includes(lowerBusca)
-    );
-
-    const mocHeader = ['Part Number','Nome','Modelo','Fabricante','Dimensão'];
-    const modData = [
-        {
-            id:1,
-            name:'João',
-            age:'20',
-            test1:'test1',
-            test2:'test2'   
-        }
-    ];
-    const navigate = useNavigate();
+    const {data,isLoading,navigate} = useComponents()
+    console.log(data)
+    console.log(isLoading)
     return(
             
         <div className="w-full h-screen bg-gray-800">
             
             <div className="flex justify-end me-10 pt-14">
-                <button className="block w-full lg:w-auto py-4 px-12 bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-full transition duration-200"
+                <button className="block w-auto py-4 px-12 bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-full transition duration-200"
                     onClick={() => navigate('/components/register')}>
                     Novo Componente</button>  
             </div>
@@ -57,24 +35,18 @@ const HomeComponents:React.FC = () => {
                 </div>
             </div>
             
-            <input
-                type="text"
-                name="nome"
-                placeholder="Buscar material..."
-                value={busca}
-                onChange={(ev) => setBusca(ev.target.value)}
-            />
-
-            <TableCustom header={mocHeader} content={modData}>
-                {modData.map((element, index) => (
-                    <TR index={index}>
-                        <TD index={index}>{element.id}</TD>
-                        <TD index={index}>{element.name}</TD>
-                        <TD index={index}>{element.age}</TD>
-                        <TD index={index}>{element.test1}</TD>
-                        <TD index={index}>{element.test2}</TD>
-                    </TR>
-                ))}
+            <TableCustom header={HeaderTableComponents} content={data!.recordset!}>
+                {data?.recordset === undefined ? <TD index={0}>Sem dados</TD>  : 
+                    data?.recordset?.map((element, index) => (
+                        <TR index={index}>
+                            <TD index={index}>{element.cd_PN}</TD>
+                            <TD index={index}>{element.ds_Nome}</TD>
+                            <TD index={index}>{element.ds_Modelo}</TD>
+                            <TD index={index}>{element.ds_Fabricante}</TD>
+                            <TD index={index}>{element.ds_Dimensao}</TD>
+                        </TR>
+                    ))}
+                {}
             </TableCustom>
             <div className="bg-gray-800 pb-3">
                 <Paginate numberpages={10} atualpage={1}  />

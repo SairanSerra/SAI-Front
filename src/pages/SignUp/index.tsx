@@ -59,8 +59,7 @@ const SignUP:React.FC = () => {
                                         control={control}
                                         rules={{ required: true, pattern: /^[A-Za-z0-9.\-_]+@[A-Za-z0-9]{2,}.[A-Za-z0-9]{2,3}.([a-z0-9]{2,})()?$/ }}
                                         render={({ field: { value, onChange } }) => (
-                                            <InputCustom onChange={onChange} value={value} error={errors.email !== undefined} type="email" placeholder="exemplo@exemplo.com" />
-                                        )} /> 
+                                            <InputCustom onChange={onChange} value={value} error={errors.email !== undefined} type="email" placeholder="exemplo@exemplo.com" />)} /> 
                                 </div>
                             </div>
                         </div>  
@@ -78,8 +77,7 @@ const SignUP:React.FC = () => {
                                         control={control}
                                         rules={{ required: true }}
                                         render={({ field: { onChange, value } } ) => (
-                                            <InputCustom onChange={onChange} value={value} error={errors.password !== undefined} type="password" placeholder="Senha" />
-                                        )}/>
+                                            <InputCustom onChange={onChange} value={value} error={errors.password !== undefined} type="password" placeholder="Senha" />)}/>
                                 </div>
                             </div>
                             <div className="w-full md:w-1/2 px-4">
@@ -95,8 +93,7 @@ const SignUP:React.FC = () => {
                                         control={control}
                                         rules={{ required: true }}
                                         render={({ field: { onChange, value } } ) => (
-                                            <InputCustom onChange={onChange} value={value} error={errors.confirmPassword !== undefined} type="password" placeholder="Confirme a senha" />
-                                        )}/>
+                                            <InputCustom onChange={onChange} value={value} error={errors.confirmPassword !== undefined} type="password" placeholder="Confirme a senha" />)}/>
                                 </div>
                             </div>
                             <div className=" w-full px-4 my-3">
@@ -104,7 +101,7 @@ const SignUP:React.FC = () => {
                             </div>
                         </div>
                         <div className='flex w-2/5 justify-center'>
-                            <button onClick={handleSubmit(HandleCreateNewUser)} className="block w-full lg:w-auto py-4 px-12 bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-full transition duration-200">Criar Conta</button>  
+                            <button color="primary" onClick={handleSubmit(HandleCreateNewUser)} className="block w-full lg:w-auto py-4 px-12 bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-full transition duration-200">Criar Conta</button>  
                         </div>
                         
                     </form>

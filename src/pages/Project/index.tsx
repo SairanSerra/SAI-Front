@@ -17,36 +17,14 @@ const Project:React.FC = () => {
             age:'20',
             test1:'test1',
             test2:'test2'
-        },
-        {
-            id:1,
-            name:'João',
-            age:'20',
-            test1:'test1',
-            test2:'test2'
-        },
-        {
-            id:1,
-            name:'João',
-            age:'20',
-            test1:'test1',
-            test2:'test2'
-        },
-        {
-            id:1,
-            name:'João',
-            age:'20',
-            test1:'test1',
-            test2:'test2'
-        },
-    
+        }    
     ];
     return(
                 
         <div className="w-full h-screen bg-gray-800">
                 
             <div className="flex justify-end me-10 pt-14">
-                <button className="block w-full lg:w-auto py-4 px-12 bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-full transition duration-200"
+                <button className="block w-auto py-4 px-12 bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-full transition duration-200"
                     onClick={() => navigate('/project/register')}>Novo Projeto</button>  
             </div>
             <div className="flex justify-left ms-48">
