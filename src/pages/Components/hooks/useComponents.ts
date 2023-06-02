@@ -3,12 +3,7 @@ import { getComponents } from '../../../services/components';
 import { useNavigate } from 'react-router-dom';
 const useComponents = () => {
     const {data, isLoading, error} = useQuery(['getComponents', ], () => getComponents(), {
-        initialData:{
-            recordset: [],
-            recordsets:[],
-            rowsAffected: [0],
-           
-        }
+
     })
 
     console.log(data)
