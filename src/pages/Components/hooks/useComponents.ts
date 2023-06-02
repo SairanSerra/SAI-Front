@@ -9,6 +9,7 @@ const useComponents = () => {
     console.log(data)
     console.log(isLoading)
     console.log(error)
+    console.log('sucesso')
     const navigate = useNavigate();
 
     return { data, isLoading ,navigate}
