@@ -8,9 +8,9 @@ services:
     ports:
       - 4001:4001
     networks:
-      - proxy-reverse-networks
+      - proxy-reverse-network
 
 networks:
-  proxy-reverse-networks:
-    name: proxy-reverse-networks
+  proxy-reverse-network:
+    name: proxy-reverse-network
     external: true
