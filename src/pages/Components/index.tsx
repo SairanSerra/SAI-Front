@@ -3,7 +3,6 @@ import React from "react";
 import TableCustom from "../../components/Table";
 import TR from "../../components/Table/components/TR";
 import TD from "../../components/Table/components/TD";
-import Paginate from "../../components/Table/components/Paginate";
 import Footer from "../../components/Layout/Footer";
 import InputCustom from "../../components/InputCustom";
 import useComponents from "./hooks/useComponents";
@@ -35,22 +34,22 @@ const HomeComponents:React.FC = () => {
                 </div>
             </div>
             
-            <TableCustom header={HeaderTableComponents} content={data!.recordset!}>
-                {data?.recordset === undefined ? <TD index={0}>Sem dados</TD>  : 
-                    data?.recordset?.map((element, index) => (
+            <TableCustom header={HeaderTableComponents} content={data!}>
+                {data?.length === 0 ? <TD index={0}>Sem dados</TD>  : 
+                    data?.map((element, index) => (
                         <TR index={index}>
-                            <TD index={index}>{element.cd_PN}</TD>
-                            <TD index={index}>{element.ds_Nome}</TD>
-                            <TD index={index}>{element.ds_Modelo}</TD>
-                            <TD index={index}>{element.ds_Fabricante}</TD>
-                            <TD index={index}>{element.ds_Dimensao}</TD>
+                            <TD index={index}>{element.part_number}</TD>
+                            <TD index={index}>{element.name}</TD>
+                            <TD index={index}>{element.model}</TD>
+                            <TD index={index}>{element.maker}</TD>
+                            <TD index={index}>{element.size}</TD>
                         </TR>
                     ))}
                 {}
             </TableCustom>
-            <div className="bg-gray-800 pb-3">
+            {/* <div className="bg-gray-800 pb-3">
                 <Paginate numberpages={10} atualpage={1}  />
-            </div>
+            </div> */}
 
             <div className="bg-gray-800 ">
                 <Footer/>

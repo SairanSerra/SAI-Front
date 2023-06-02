@@ -1,7 +1,8 @@
-import axios from "axios"
+import apiSai from "../api/apiSai"
 import { IResponseGetComponents } from "./types"
 
 export const getComponents = async() => {
-    const response = await axios.get<IResponseGetComponents>('http://localhost:3001/getComponente')
+    const response = await apiSai.get<IResponseGetComponents[]>('/components/get-all')
+    console.log(response.data)
     return response.data
 }

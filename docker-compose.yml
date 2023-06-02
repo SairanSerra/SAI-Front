@@ -7,3 +7,10 @@ services:
     container_name: sai-front
     ports:
       - 4001:4001
+    networks:
+      - proxy-reverse-networks
+
+networks:
+  proxy-reverse-networks:
+    name: proxy-reverse-networks
+    external: true
