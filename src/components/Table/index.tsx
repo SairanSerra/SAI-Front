@@ -23,7 +23,7 @@ const TableCustom:React.FC<propsTableCustom> = ({header, children, content}) => 
                                 </tr>
                             </thead>
                             <tbody>
-                                {content.length === 0 ? (
+                                {content ===  undefined ? (
                                     <tr className="text-xl text-white bg-gray-700">
                                         <td className="py-5 pl-10 text-gray-200 text-center" colSpan={header.length} >Não há dados</td>
                                     </tr>

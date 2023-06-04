@@ -1,1 +1,1 @@
-export const HeaderTableComponents = ['Part Number','Nome','Modelo','Fabricante','Dimensão'];
+export const HeaderTableComponents = ['Part Number','Nome','Modelo','Fabricante','Dimensão', 'Documento'];

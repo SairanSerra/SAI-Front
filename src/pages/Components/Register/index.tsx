@@ -93,7 +93,6 @@ const RegisterComponents:React.FC = () => {
                                     
                             </div>
                         </div>
-                        <img className="hidden lg:block " src={PecaMecanica} alt=""style={{height: '300px', width: '300px'}} />
                     </div>
                     <div className='flex justify-center ms-6'>
                               

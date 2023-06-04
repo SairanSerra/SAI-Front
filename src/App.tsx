@@ -1,6 +1,7 @@
 import React from 'react'
 import PrincipalRoutes from './routes'
 import { QueryClient, QueryClientProvider } from 'react-query'
+import { Toaster } from 'react-hot-toast';
 
 const App:React.FC = () => {
 
@@ -15,7 +16,8 @@ const App:React.FC = () => {
     return (
         <div>
             <QueryClientProvider client={queryClient} >
-                <PrincipalRoutes />  
+                <PrincipalRoutes /> 
+                <Toaster /> 
             </QueryClientProvider>
         </div>
         
