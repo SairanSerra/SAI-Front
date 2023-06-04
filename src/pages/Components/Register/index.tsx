@@ -4,7 +4,6 @@ import InputCustom from '../../../components/InputCustom';
 import IconNumber from './Icons/IconNumber';
 import IconDescription from './Icons/IconDescription';
 import IconHammer from './Icons/IconHammer';
-import PecaMecanica from '../../../assets/PeçaMecanica.png';
 import IconPrice from './Icons/IconPrice';
 import IconDraft from './Icons/IconDraft';
 import IconName from './Icons/IconName';
