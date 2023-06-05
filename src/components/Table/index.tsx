@@ -1,13 +1,15 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React from "react";
+import Spinner from "../Spinner";
 
 interface propsTableCustom {
     header: string[];
     content: any[];
     children: React.ReactNode
+    isLoading?: boolean
 }
 
-const TableCustom:React.FC<propsTableCustom> = ({header, children, content}) => {
+const TableCustom:React.FC<propsTableCustom> = ({header, children, content, isLoading}) => {
     return(
 
         <div>
@@ -23,11 +25,12 @@ const TableCustom:React.FC<propsTableCustom> = ({header, children, content}) => 
                                 </tr>
                             </thead>
                             <tbody>
-                                {content ===  undefined ? (
-                                    <tr className="text-xl text-white bg-gray-700">
-                                        <td className="py-5 pl-10 text-gray-200 text-center" colSpan={header.length} >Não há dados</td>
-                                    </tr>
-                                ) : children}
+                                {isLoading ? 
+                                    <Spinner /> : content ===  undefined ? (
+                                        <tr className="text-xl text-white bg-gray-700">
+                                            <td className="py-5 pl-10 text-gray-200 text-center text-xs" colSpan={header.length} >Não há dados</td>
+                                        </tr>
+                                    ) : children}
                             </tbody>
                         </table>
                     </div>

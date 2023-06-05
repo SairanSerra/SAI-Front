@@ -10,8 +10,9 @@ import ProductHome from '../pages/Home/Product';
 import HomeLogged from '../pages/HomeLogged';
 import HTTP404 from '../components/Http/404';
 import RoutesComponents from './components';
-import RoutePrince from './prince';
+import RouteClient from './client';
 import RouteProject from './project';
+import RoutePracticalTest from './practicalTest';
 
 const PrincipalRoutes:React.FC = () => (
 
@@ -26,8 +27,9 @@ const PrincipalRoutes:React.FC = () => (
             <Route path="/principal" element={<HomeLogged />} />
             <Route path="*" element={<HTTP404 />} />
             <Route path="/components/*" element={<RoutesComponents />} />
-            <Route path="/prince/*" element={<RoutePrince />} />
+            <Route path="/client/*" element={<RouteClient />} />
             <Route path="/project/*" element={<RouteProject />} />
+            <Route path="/practical-test/*" element={<RoutePracticalTest />} />
         </Routes>
     </BrowserRouter>
 

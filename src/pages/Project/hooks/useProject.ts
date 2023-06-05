@@ -12,15 +12,16 @@ const useProject = () => {
             code: '',
             date: '',
             client: '',
+            classClient: ''
         },
         mode: 'onChange',
     });
 
-    const HandleLogin = (data:LoginProject) => {
+    const handleCreatePracticalTest = (data:LoginProject) => {
         console.log(data);
     };
     return {
-        navigate, errors, handleSubmit, control, HandleLogin,
+        navigate, errors, handleSubmit, control, handleCreatePracticalTest,
     };
 };
 export default useProject;

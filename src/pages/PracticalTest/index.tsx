@@ -1,80 +1,55 @@
 import React from 'react';
-import InputCustom from "../../components/InputCustom";
 import Footer from "../../components/Layout/Footer";
 import TableCustom from "../../components/Table";
-import Paginate from "../../components/Table/components/Paginate";
 import TD from "../../components/Table/components/TD";
 import TR from "../../components/Table/components/TR";
+import ButtonDropdown from '../../components/ButtonDropdown';
 
 const PraticalTest:React.FC = () => {
 
-    const mocHeader = ['ID','Nome','Idade','test1','test1'];
+    const mocHeader = ['ID','Nome Projeto','Data Início','Data Entrega', 'Status', ''];
     const modData = [
         {
             id:1,
-            name:'João',
-            age:'20',
-            test1:'test1',
-            test2:'test2'
+            name:'Torno mercânico',
+            dtInicio: '15/06/2023',
+            dtFim: '27/06/2023',
+            status: 'Em Produção'
         },
         {
-            id:1,
-            name:'João',
-            age:'20',
-            test1:'test1',
-            test2:'test2'
+            id:2,
+            name:'Stifler',
+            dtInicio: '06/06/2023',
+            dtFim: '16/09/2023',
+            status: 'Em Planejamento'
         },
         {
-            id:1,
-            name:'João',
-            age:'20',
-            test1:'test1',
-            test2:'test2'
-        },
-        {
-            id:1,
-            name:'João',
-            age:'20',
-            test1:'test1',
-            test2:'test2'
+            id:3,
+            name:'Polia 22"',
+            dtInicio: '01/06/2023',
+            dtFim: '05/06/2023',
+            status: 'Finalizada'
         },
     
     ];
     return(
                 
         <div className="w-full h-screen bg-gray-800">
-                
-            <div className="flex justify-end me-10 pt-14">
-                <button className="block w-auto py-4 px-12 bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-full transition duration-200">Cadastrar Prova Prática</button>  
-            </div>
-            <div className="flex justify-left ms-48">
-                <div className="w-full md:w-1/4 px-4 mt-20">
-                    <div className="flex items-center pl-6 bg-white rounded-full">
-                        <InputCustom type="text" placeholder="Fornecedor" />
-                    </div>
-                </div>
-                <div className="w-full md:w-2/12 px-16 ">
-                    <a className="block ms-4 mb-4 py-4 mt-20 text-white text-center font-bold border border-gray-50 hover:border-gray-300 rounded-full cursor-pointer" 
-                    >Pesquisar</a>
-                </div>
-            </div>
-                
-            <TableCustom header={mocHeader} content={modData}>
-                {modData.map((element, index) => (
-                    <TR index={index}>
-                        <TD index={index}>{element.id}</TD>
-                        <TD index={index}>{element.name}</TD>
-                        <TD index={index}>{element.age}</TD>
-                        <TD index={index}>{element.test1}</TD>
-                        <TD index={index}>{element.test2}</TD>
-                    </TR>
-                ))}
-            </TableCustom>
-            <div className="bg-gray-800 pb-3">
-                <Paginate numberpages={10} atualpage={1}  />
-            </div>
-    
-            <div className="bg-gray-800 ">
+            <div className='pt-28'>     
+                <TableCustom header={mocHeader} content={modData}>
+                    {modData.map((element, index) => (
+                        <TR index={index}>
+                            <TD index={index}>{element.id}</TD>
+                            <TD index={index}>{element.name}</TD>
+                            <TD index={index}>{element.dtInicio}</TD>
+                            <TD index={index}>{element.dtFim}</TD>
+                            <TD index={index}>{element.status}</TD>
+                            <TD index={index}><ButtonDropdown disabled={element.status === 'Finalizada' } /></TD>
+                        </TR>
+                    ))}
+                </TableCustom>
+            </div> 
+            <div className="bg-gray-800 pt-32">
                 <Footer/>
             </div>
                 

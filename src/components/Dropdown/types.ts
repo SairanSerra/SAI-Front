@@ -5,4 +5,7 @@ export interface Elements {
 
 export interface propsDropdown {
     elements: Elements[];
+    errors?: boolean
+    onChange?: React.ChangeEventHandler<HTMLSelectElement>
+    value?: string
 }
