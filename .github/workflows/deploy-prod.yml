@@ -20,7 +20,7 @@ jobs:
       - name: Criando env production
         run: |
          touch .env.production
-         echo "VITE_PUBLIC_API_SAI=http://181.215.135.140:4002" >> .env.production
+         echo "VITE_PUBLIC_API_SAI=${{secrets.VITE_PUBLIC_API_SAI}}" >> .env.production
       - name: Build and push Docker images
         uses: docker/build-push-action@v2.3.0
         with:
