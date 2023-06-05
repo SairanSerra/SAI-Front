@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 
 const Home:React.FC = () => {
     const navigate = useNavigate();
+    console.log(import.meta.env.VITE_PUBLIC_API_SAI)
     return(
         <div className='h-full bg-gray-800'>        
             <section className="pb-20 ">
