@@ -4,8 +4,12 @@ import DropdownCustom from '../../../components/Dropdown';
 import InputCustom from '../../../components/InputCustom';
 import { ElementClassificationClient } from '../utils/elementSelect';
 import { useNavigate } from 'react-router-dom';
+import useProject from '../hooks/useProject';
+import { Controller } from 'react-hook-form';
 
 const RegisterProject:React.FC = () => {
+    const{errors, handleSubmit, control, HandleLogin
+    } = useProject();
     const navigate = useNavigate();
     return(
         <div className="h-screen bg-gray-800">
@@ -31,7 +35,12 @@ const RegisterProject:React.FC = () => {
                                             <path d="M10.4997 17.4966C8.70684 17.4966 6.91397 16.8141 5.54984 15.45C5.37922 15.2793 5.37922 15.002 5.54984 14.8313C5.72047 14.6607 5.99784 14.6607 6.16847 14.8313C8.55722 17.2192 12.4422 17.2192 14.831 14.8313C15.0016 14.6607 15.279 14.6607 15.4496 14.8313C15.6202 15.002 15.6202 15.2793 15.4496 15.45C14.0855 16.8141 12.2926 17.4966 10.4997 17.4966Z" fill="black"></path>
                                         </svg>
                                     </span>
-                                    <InputCustom type="text" placeholder="Código" />
+                                    <Controller
+                                        name="code"
+                                        control={control}
+                                        rules={{ required: true }}
+                                        render={({ field: { onChange, value } }) => (
+                                            <InputCustom onChange={onChange} value={value} error={errors.code !== undefined} type="text" placeholder="Código" /> )} />
                                 </div>
                             </div>
                             <div className="w-full md:w-1/2 px-4">
@@ -43,7 +52,12 @@ const RegisterProject:React.FC = () => {
                                             <rect x="15" y="15" width="5" height="1" rx="0.5" fill="black"></rect><rect x="17" y="18" width="5" height="1" rx="0.5" transform="rotate(-90 17 18)" fill="black"></rect>
                                         </svg>
                                     </span>
-                                    <InputCustom type="date" placeholder="Data Requisição" maxLength={8} />
+                                    <Controller
+                                        name="date"
+                                        control={control}
+                                        rules={{ required: true }}
+                                        render={({ field: { onChange, value } }) => (
+                                            <InputCustom onChange={onChange} value={value} error={errors.date !== undefined} type="date" placeholder="Data Requisição" maxLength={8} /> )} />
                                 </div>
                             </div>
                         </div>
@@ -70,13 +84,19 @@ const RegisterProject:React.FC = () => {
                                         </svg>
                                     </span>
                                     {/* Adicionar dropdown com requisição no backend */}
-                                    <InputCustom type="text" placeholder="Cliente" />
+                                    <Controller
+                                        name="client"
+                                        control={control}
+                                        rules={{ required: true }}
+                                        render={({ field: { onChange, value } }) => (
+                                            <InputCustom onChange={onChange} value={value} error={errors.client !== undefined} type="text" placeholder="Cliente" /> )} />
+
                                 </div>
                             </div>
                         </div>
                         <div className='flex w-2/5 justify-center'>
                             <button className="block w-full lg:w-auto me-4 py-4 px-12 text-white text-center font-bold border border-gray-50 hover:border-gray-300 rounded-full cursor-pointer" onClick={() => navigate('/project')}>Cancelar</button> 
-                            <button className="block w-full lg:w-auto py-4 px-12 bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-full transition duration-200">Salvar</button>
+                            <button color="primary" onClick={handleSubmit(HandleLogin)} className="block w-full lg:w-auto py-4 px-12 bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-full transition duration-200">Salvar</button>
                         </div>
                         
                     </form>

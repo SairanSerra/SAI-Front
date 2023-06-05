@@ -1,0 +1,1 @@
+export const sendFormat = (value: string) => value.replace(/\D/g, '');

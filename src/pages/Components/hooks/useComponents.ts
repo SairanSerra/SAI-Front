@@ -2,6 +2,7 @@ import { useMutation, useQuery } from 'react-query';
 import { getComponents, deleteComponent } from '../../../services/components';
 import { useNavigate } from 'react-router-dom';
 import Toast from '../../../components/Toast';
+
 const useComponents = () => {
 
     const {data, isLoading, refetch} = useQuery(['getComponents'], () => getComponents(), {
