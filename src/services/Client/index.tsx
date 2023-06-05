@@ -1,10 +1,10 @@
 import apiSai from "../api/apiSai"
-import { IRequestCreateClient } from "./types"
+import { IRequestCreateClient, IResposeGetClient } from "./types"
 
 export const deleteClient = async(idClient: number) => 
 {
     const params = {
-        idClient: idClient
+        id: idClient
     }
     const response = await apiSai.delete('/client/destroy', {params})
     return response.data
@@ -12,7 +12,7 @@ export const deleteClient = async(idClient: number) =>
 
 export const getAllClient = async() => 
 {
-    const response = await apiSai.get('/client/get-all')
+    const response = await apiSai.get<IResposeGetClient>('/client/get-all')
     console.log(response.data)
     return response.data
 }

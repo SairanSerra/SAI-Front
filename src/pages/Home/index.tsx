@@ -5,14 +5,13 @@ import { useNavigate } from 'react-router-dom';
 
 const Home:React.FC = () => {
     const navigate = useNavigate();
-    console.log(import.meta.env.VITE_PUBLIC_API_SAI)
     return(
         <div className='h-full bg-gray-800'>        
             <section className="pb-20 ">
                 <nav className="relative">
                     <div className="flex py-8 px-4 lg:px-8 justify-between items-center">
                         <div className="text-2xl" />
-                           
+                      
                         <div className="lg:hidden">
                             <button className="p-2 navbar-burger">
                                 <svg className="w-10 h-3" width="39" height="13" viewBox="0 0 39 13" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="39" height="2" rx="1" fill="#C4C4C4"></rect><rect x="19" y="11" width="20" height="2" rx="1" fill="#C4C4C4"></rect></svg>
@@ -62,21 +61,24 @@ const Home:React.FC = () => {
                     </div>
                     <div className="mt-auto px-10">
                         <div className="pt-6">
-                            <a className="block mb-4 py-4 px-12 my-5 text-white text-center font-bold border border-gray-50 hover:border-gray-300 rounded-full cursor-pointer" 
+                            <a className="block pb-4 py-4 px-12 my-5 text-white text-center font-bold border border-gray-50 hover:border-gray-300 rounded-full cursor-pointer" 
                                 onClick={() => navigate('/login')}>Entrar</a>
                             {/* <a className="block py-4 px-12 text-white text-center font-bold bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200"
                                 onClick={() => navigate('/signup')}
                             >Cadastre-se</a> */}
                         </div>
                             
-                        <p className=" mb-4 text-lg text-center">
+                        <p className=" pb-4 text-lg text-center">
                             <span>2023 © SAI. Todos direitos reservados.</span>
                         </p>
                     </div>
                 </div>
                 
             </div>
-            <Footer />
+            <div className=' pt-8'>
+                <Footer />  
+            </div>
+            
         </div> 
     )
 }

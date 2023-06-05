@@ -5,9 +5,13 @@ import Toast from '../../../components/Toast';
 
 const useClient = () => {
     const navigate = useNavigate();
-    const mocHeader = ['ID','Nome','Tipo', ''];
+    const mocHeader = ['ID','Nome','Tipo', 'Data de criação', ''];
 
-    const {data,refetch} = useQuery('get-all-clients', () => getAllClient())
+    const {data,refetch, isLoading} = useQuery('get-all-clients', () => getAllClient(), {
+        initialData: {
+            content: []
+        }
+    })
 
     const handleDeleteClient = useMutation('delete-client', (idClient: number) => deleteClient(idClient), {
         onSuccess:() => {
@@ -20,7 +24,7 @@ const useClient = () => {
     })
 
     return {
-        navigate, handleDeleteClient, mocHeader,data
+        navigate, handleDeleteClient, mocHeader,data, isLoading
     };
 };
 export default useClient;
