@@ -61,15 +61,9 @@ const Login:React.FC = () => {
                                         </div>
                                         <div className="flex items-center pl-6 mb-6 bg-white rounded-full">                
                                         </div>
-<<<<<<< HEAD
                                         <button onClick={handleSubmit(HandleLogin)} className="py-4 w-full bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-full transition duration-200">Entrar</button>
                                         <a className="block mb-4 py-4 px-12 my-5 text-white text-center font-bold border border-gray-50 hover:border-gray-300 rounded-full cursor-pointer" 
                                             onClick={() => navigate('/signup')}>Cadastre-se</a>
-=======
-                                        <button className="py-4 w-full bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-full transition duration-200">Entrar</button>
-                                        {/* <a className="block mb-4 py-4 px-12 my-5 text-white text-center font-bold border border-gray-50 hover:border-gray-300 rounded-full cursor-pointer" 
-                                            onClick={() => navigate('/signup')}>Cadastre-se</a> */}
->>>>>>> 594ec7f67f4c79a47938aec67bda5ea9b56422bf
                                     </form>
                                 </div>
                             </div>
